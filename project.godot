@@ -10,6 +10,15 @@ config_version=5
 
 [application]
 
-config/name="starcrossed"
+config/name="Fijna Ya Rab"
+run/main_scene="uid://dqtfagie3q5mr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="trying out 13-12-2025"

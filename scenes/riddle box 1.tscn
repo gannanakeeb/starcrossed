@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=3 uid="uid://74v1mulgwwkq"]
+
+[ext_resource type="Texture2D" uid="uid://bdg4sy5pttccq" path="res://character assets/aq.png" id="1_j113f"]
+[ext_resource type="Script" uid="uid://lmqxtb236ata" path="res://scenes/riddle_1.gd" id="1_t6vwt"]
+[ext_resource type="Texture2D" uid="uid://mov65durn4qq" path="res://character assets/pi.png" id="2_t6vwt"]
+[ext_resource type="Texture2D" uid="uid://6xk4inpyqcam" path="res://character assets/ari.png" id="3_u6a8m"]
+[ext_resource type="Texture2D" uid="uid://b10qtawqujsy1" path="res://character assets/tau.png" id="4_pnjgo"]
+[ext_resource type="Texture2D" uid="uid://fxg7k5vevyeh" path="res://character assets/gem.png" id="5_i75mr"]
+[ext_resource type="Texture2D" uid="uid://bhtrb0eo554rm" path="res://character assets/canc.png" id="6_24206"]
+[ext_resource type="Texture2D" uid="uid://y3afigfs23bg" path="res://character assets/leo.png" id="7_udf3u"]
+[ext_resource type="Texture2D" uid="uid://be7sepp0xtyma" path="res://character assets/virgo.png" id="8_s6gy4"]
+[ext_resource type="Texture2D" uid="uid://dkn3pg7idugui" path="res://character assets/libr.png" id="9_65e1x"]
+[ext_resource type="Texture2D" uid="uid://bu0pas4oe5ac1" path="res://character assets/sco.png" id="10_1qcjx"]
+[ext_resource type="Texture2D" uid="uid://dhqyrcokwoyl6" path="res://character assets/sag.png" id="11_bdcu4"]
+[ext_resource type="Texture2D" uid="uid://cvctj5upky2i7" path="res://character assets/cap.png" id="12_d65ho"]
+
+[node name="riddle ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -99.0
+offset_right = 1044.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6vwt")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -39.000004
+offset_top = -3.0517578e-05
+offset_right = 338.94122
+offset_bottom = 368.91943
+scale = Vector2(5.44, 1.4799979)
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(1, 2.6774192)
+theme_override_font_sizes/font_size = 23
+text = "your FATE will move you forward"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Label"]
+layout_mode = 0
+offset_left = 4.262673
+offset_top = -148.94579
+offset_right = 2148.2627
+offset_bottom = 205.05421
+scale = Vector2(0.15061447, 0.13512789)
+
+[node name="aq" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_j113f")
+
+[node name="pi" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_t6vwt")
+
+[node name="ari" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_u6a8m")
+
+[node name="tau" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_pnjgo")
+
+[node name="gem" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_i75mr")
+
+[node name="can" type="TextureButton" parent="Panel/Label/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_24206")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/Label"]
+layout_mode = 0
+offset_left = 4.0322576
+offset_top = -78.915665
+offset_right = 2148.0322
+offset_bottom = 275.08435
+scale = Vector2(0.15065295, 0.13722558)
+
+[node name="leo" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("7_udf3u")
+
+[node name="vir" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("8_s6gy4")
+
+[node name="lib" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("9_65e1x")
+
+[node name="scor" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("10_1qcjx")
+
+[node name="sag" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("11_bdcu4")
+
+[node name="cap" type="TextureButton" parent="Panel/Label/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("12_d65ho")
+
+[node name="submit Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 293.894
+offset_top = 158.46774
+offset_right = 355.894
+offset_bottom = 189.46774
+scale = Vector2(1.1361119, 2.629032)
+text = "submit"

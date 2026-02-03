@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=28 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://bgh70hg4coo0u" path="res://character assets/1 sky.png" id="1_3mrvk"]
 [ext_resource type="Texture2D" uid="uid://o8f24xgsl5b0" path="res://Children Map/Map Children Final/2 house bg.png" id="2_hqns4"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://bsosdct47xjvd" path="res://scenes/roaya.tscn" id="18_qcxrq"]
 [ext_resource type="PackedScene" uid="uid://dfyhfanfcrnij" path="res://scenes/riddle_area1children.tscn" id="19_3mrvk"]
 [ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="20_llmri"]
+[ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="22_lrpxc"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
 
@@ -183,5 +185,20 @@ offset_top = 198.0
 offset_right = -602.0
 offset_bottom = 198.0
 scale = Vector2(0.7889103, 0.89505893)
+
+[node name="screen" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueSystem" parent="CanvasLayer/screen" instance=ExtResource("22_lrpxc")]
+layout_mode = 1
+
+[node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
+position = Vector2(958, -432)
+conversation_file = "res://conversations/example.txt"
 
 [connection signal="body_entered" from="riddle area" to="nader" method="_on_riddle_area_body_entered"]

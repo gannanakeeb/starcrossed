@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn0pd73b2548m"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://cdr2od7gjr2mk"
+path="res://.godot/imported/3 depthnew.png-f0ecb7abb9a989b1286102a3c2ac07ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://gassermap/Map Gaser Final/3 depthnew.png"
+dest_files=["res://.godot/imported/3 depthnew.png-f0ecb7abb9a989b1286102a3c2ac07ae.ctex"]
 
 [params]
 

@@ -10,21 +10,6 @@ config_version=5
 
 [application]
 
-config/name="Fijna Ya Rab"
-run/main_scene="uid://dqtfagie3q5mr"
+config/name="trying out 13-12-2025"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/stretch/mode="viewport"
-
-[dotnet]
-
-project/assembly_name="trying out 13-12-2025"
-
-[gui]
-
-theme/custom_font="uid://c7ntq0175fk7u"

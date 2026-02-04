@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn0pd73b2548m"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://budojgmq3xk3l"
+path="res://.godot/imported/2 house bg.png-40f2da9ef1d23d725b4215baf6ff49e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://gassermap/Map Gaser Final/2 house bg.png"
+dest_files=["res://.godot/imported/2 house bg.png-40f2da9ef1d23d725b4215baf6ff49e8.ctex"]
 
 [params]
 

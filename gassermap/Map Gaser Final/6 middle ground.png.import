@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn0pd73b2548m"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://kkytb8jxbbve"
+path="res://.godot/imported/6 middle ground.png-41b89ba400e5458710a09a47d7cc05f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://gassermap/Map Gaser Final/6 middle ground.png"
+dest_files=["res://.godot/imported/6 middle ground.png-41b89ba400e5458710a09a47d7cc05f2.ctex"]
 
 [params]
 

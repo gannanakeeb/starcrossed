@@ -58,27 +58,6 @@ texture = ExtResource("7_fmdnp")
 position = Vector2(117, -1512)
 texture = ExtResource("8_fmdnp")
 
-[node name="star" parent="7Foregroundnew" instance=ExtResource("10_ysndr")]
-position = Vector2(1729, 573)
-
-[node name="star2" parent="7Foregroundnew" instance=ExtResource("10_ysndr")]
-position = Vector2(-3583, 661)
-
-[node name="star3" parent="7Foregroundnew" instance=ExtResource("10_ysndr")]
-position = Vector2(-3213, -576)
-
-[node name="gasser" parent="7Foregroundnew" instance=ExtResource("13_w2lsn")]
-position = Vector2(-3183, -188)
-
-[node name="Camera2D" type="Camera2D" parent="7Foregroundnew/gasser"]
-position = Vector2(305.79047, -746.1556)
-zoom = Vector2(0.5, 0.5)
-
-[node name="Sprite2D2" type="Sprite2D" parent="7Foregroundnew/gasser"]
-position = Vector2(4217.064, 1730.7732)
-scale = Vector2(1.7778516, 1.9230814)
-texture = ExtResource("15_ws52y")
-
 [node name="8FrontOfCh" type="Sprite2D" parent="."]
 position = Vector2(117, -1088)
 texture = ExtResource("9_vs67v")
@@ -91,6 +70,27 @@ texture = ExtResource("10_xvat7")
 material = SubResource("CanvasItemMaterial_ci03i")
 position = Vector2(117, -1088)
 texture = ExtResource("11_dlmju")
+
+[node name="star" parent="." instance=ExtResource("10_ysndr")]
+position = Vector2(1846, -939)
+
+[node name="star2" parent="." instance=ExtResource("10_ysndr")]
+position = Vector2(-3466, -851)
+
+[node name="star3" parent="." instance=ExtResource("10_ysndr")]
+position = Vector2(-3096, -2088)
+
+[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
+position = Vector2(-3066, -1700)
+
+[node name="Camera2D" type="Camera2D" parent="gasser"]
+position = Vector2(305.79047, -746.1556)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Sprite2D2" type="Sprite2D" parent="gasser"]
+position = Vector2(4217.064, 1730.7732)
+scale = Vector2(1.7778516, 1.9230814)
+texture = ExtResource("15_ws52y")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)

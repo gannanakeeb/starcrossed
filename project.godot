@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="trying out 13-12-2025"
+config/name="gasser lev 1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

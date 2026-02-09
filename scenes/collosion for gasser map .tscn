@@ -30,7 +30,7 @@ texture = ExtResource("3_wqsk0")
 visible = false
 
 [node name="wall" type="CollisionShape2D" parent="."]
-position = Vector2(1903, -582)
+position = Vector2(1901, -632)
 shape = SubResource("RectangleShape2D_lml0l")
 
 [node name="first ground" type="CollisionShape2D" parent="."]

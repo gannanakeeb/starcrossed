@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://57br65oq0gbq"]
+[gd_scene load_steps=10 format=3 uid="uid://57br65oq0gbq"]
 
 [ext_resource type="Texture2D" uid="uid://oaqii12m74la" path="res://gassermap/Map Gaser Final/7 foreground.png" id="3_wqsk0"]
 [ext_resource type="Texture2D" uid="uid://w2482lpm83u1" path="res://gassermap/Map Gaser Final/7 foregroundnew.png" id="4_v4hvw"]
@@ -7,7 +7,7 @@
 size = Vector2(20, 536)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmvu7"]
-size = Vector2(1849.9805, 19.365753)
+size = Vector2(1871.9802, 19.42369)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ccyx"]
 size = Vector2(552, 4.5)
@@ -20,7 +20,15 @@ size = Vector2(683, 1656)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2w1x3"]
 size = Vector2(208, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bqxj"]
+size = Vector2(374.60052, 41.494194)
+
 [node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="7Foregroundnew" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -423)
+texture = ExtResource("4_v4hvw")
 
 [node name="7Foreground" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -34,7 +42,7 @@ position = Vector2(1901, -632)
 shape = SubResource("RectangleShape2D_lml0l")
 
 [node name="first ground" type="CollisionShape2D" parent="."]
-position = Vector2(975.01245, -357.75134)
+position = Vector2(964.0125, -357.75134)
 rotation = -0.0026315623
 shape = SubResource("RectangleShape2D_pmvu7")
 
@@ -42,37 +50,6 @@ shape = SubResource("RectangleShape2D_pmvu7")
 position = Vector2(1893, -421)
 build_mode = 1
 polygon = PackedVector2Array(-26, 7, -32, 14, -50, 27, -77, 46, -82, 49, -86, 52, 14, 52, 0, -4, -12, 1)
-
-[node name="step 1" type="CollisionPolygon2D" parent="."]
-build_mode = 1
-polygon = PackedVector2Array(49, -346, 49, -336, 0, -336, -3, -333, -3, -330, 0, -329, 3, -329, 54, -330, 55, -349, 54, -365, 47, -365, 44, -364, 43, -361, 44, -359, 47, -357, 49, -357)
-
-[node name="step 2" type="CollisionPolygon2D" parent="."]
-build_mode = 1
-polygon = PackedVector2Array(3, -329, 3, -304, -41, -304, -44, -301, -44, -298, -42, -297, -39, -296, 16, -296, 15, -329)
-
-[node name="step 3" type="CollisionPolygon2D" parent="."]
-position = Vector2(-42, 32)
-build_mode = 1
-polygon = PackedVector2Array(3, -329, 3, -304, -15.286896, -304.00003, -41, -304, -44, -301, -44, -298, -42, -297, -39, -296, 16, -296, 15, -329)
-
-[node name="step 4" type="CollisionPolygon2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-84, 65)
-build_mode = 1
-polygon = PackedVector2Array(3, -329, 3, -304, -15.286896, -304.00003, -44, -304, -47, -302, -47, -298, -43, -296, -39, -296, 16, -296, 15, -329)
-
-[node name="step 5" type="CollisionPolygon2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-126, 95)
-build_mode = 1
-polygon = PackedVector2Array(0, -326, 0, -304, -15.286896, -304.00003, -44, -304, -47, -302, -47, -298, -43, -296, -39, -296, 16, -296, 16, -326)
-
-[node name="step 6" type="CollisionPolygon2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-175, 130)
-build_mode = 1
-polygon = PackedVector2Array(8, -331, 8, -304, -15.286896, -304.00003, -44, -304, -47, -302, -47, -298, -43, -296, -39, -296, 16, -296, 17, -331)
 
 [node name="floating platform" type="CollisionPolygon2D" parent="."]
 build_mode = 1
@@ -136,7 +113,8 @@ shape = SubResource("SegmentShape2D_wbs7d")
 position = Vector2(648, 582)
 shape = SubResource("RectangleShape2D_2w1x3")
 
-[node name="7Foregroundnew" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(4, -427)
-texture = ExtResource("4_v4hvw")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-104.754875, -231.25414)
+rotation = 2.4627955
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3bqxj")

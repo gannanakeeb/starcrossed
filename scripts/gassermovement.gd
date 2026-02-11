@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 400.0
 @export var jump_velocity: float = -800.0
 @export var gravity: float = 980.0
+@onready var sfx_walk: AudioStreamPlayer = $sfx_walk
 
 @export var main_character: CharacterBody2D = null
 @export var teleport_distance: float = 500.0
@@ -61,6 +62,7 @@ func _physics_process(delta: float) -> void:
 		if not is_on_floor():
 			if velocity.y > 0:
 				sprite.play("jump")
+				sfx_walk.play()
 		elif velocity.x != 0:
 			sprite.play("walk")
 		else:

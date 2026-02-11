@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://baxaogtqnw2ed"]
+[gd_scene load_steps=15 format=3 uid="uid://baxaogtqnw2ed"]
 
 [ext_resource type="Script" uid="uid://biya44mk8dksh" path="res://scripts/gassermovement.gd" id="1_77hif"]
 [ext_resource type="Texture2D" uid="uid://d0tx3v6q5edov" path="res://character assets/gaser final.png" id="2_77hif"]
 [ext_resource type="Texture2D" uid="uid://b3ovc0i3kxdie" path="res://character assets/idle final .png" id="2_rqaon"]
+[ext_resource type="AudioStream" uid="uid://dyj08ya2spg5c" path="res://character assets/sfx/walking-on-dried-grass-30049.mp3.ogg" id="4_rqaon"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_baia4"]
 atlas = ExtResource("2_rqaon")
@@ -91,9 +92,14 @@ scale = Vector2(0.9315172, 0.9484722)
 sprite_frames = SubResource("SpriteFrames_sksnt")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.7501424
+frame_progress = 0.8224261
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(320.0133, -473.078)
 scale = Vector2(0.49085116, -0.5402999)
 shape = SubResource("CapsuleShape2D_jklgs")
+
+[node name="sfx_walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rqaon")
+volume_db = -5.0
+autoplay = true

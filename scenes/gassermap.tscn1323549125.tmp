@@ -82,7 +82,6 @@ position = Vector2(-3096, -2088)
 
 [node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
 position = Vector2(-3066, -1700)
-sfx_walking = null
 
 [node name="Camera2D" type="Camera2D" parent="gasser"]
 position = Vector2(305.79047, -746.1556)

@@ -61,6 +61,7 @@ func _on_vir_pressed() -> void:
 
 func _on_lib_pressed() -> void:
 	add_symbol("lib")# Replace with function body.
+	print("The button works!") # This will show up in the Output console at the bottom
 
 
 func _on_scor_pressed() -> void:

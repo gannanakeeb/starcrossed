@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dyy150xlx8587"
+path="res://.godot/imported/walking-in-grass-in-evening-with-loud-bird-25521.wav-657c3a629b8074cdb6c8e64d53b58325.sample"
+
+[deps]
+
+source_file="res://character assets/walking-in-grass-in-evening-with-loud-bird-25521.wav"
+dest_files=["res://.godot/imported/walking-in-grass-in-evening-with-loud-bird-25521.wav-657c3a629b8074cdb6c8e64d53b58325.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

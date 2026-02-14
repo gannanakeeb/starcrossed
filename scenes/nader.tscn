@@ -1,10 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://050q51eopcuy"]
+[gd_scene load_steps=46 format=3 uid="uid://050q51eopcuy"]
 
 [ext_resource type="Texture2D" uid="uid://jpsidqdbcqwg" path="res://character assets/nader.png" id="1_87ecu"]
 [ext_resource type="Script" uid="uid://2k78g7stk2l6" path="res://scenes/CharacterController.gd" id="1_wwt3f"]
 [ext_resource type="Texture2D" uid="uid://b6f01i0apolwh" path="res://character assets/nader colored edited.png" id="3_noci8"]
 [ext_resource type="Texture2D" uid="uid://dxwdanr7adito" path="res://character assets/nader idle.png" id="4_soifb"]
 [ext_resource type="Texture2D" uid="uid://c7nsp05yn07vs" path="res://character assets/nader jump jump .png" id="5_psaxw"]
+[ext_resource type="Texture2D" uid="uid://6yhtefus1yeo" path="res://character assets/Untitled1771020014918.png" id="6_vmu1f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wd6uh"]
 atlas = ExtResource("1_87ecu")
@@ -241,6 +242,56 @@ animations = [{
 radius = 44.0
 height = 238.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0exop"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(0, 0, 333, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgkb8"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(333, 0, 333, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xj8qt"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(666, 0, 333, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y67n8"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(999, 0, 333, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be4vo"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(1332, 0, 333, 1200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jrx4"]
+atlas = ExtResource("6_vmu1f")
+region = Rect2(1665, 0, 333, 1200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plhro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0exop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgkb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xj8qt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y67n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be4vo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jrx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="nader" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 texture_filter = 1
 script = ExtResource("1_wwt3f")
@@ -283,3 +334,10 @@ frame_progress = 0.85927206
 visible = false
 position = Vector2(17, 12)
 shape = SubResource("CapsuleShape2D_wwt3f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-349, -62)
+sprite_frames = SubResource("SpriteFrames_plhro")
+frame = 3
+frame_progress = 0.91449064

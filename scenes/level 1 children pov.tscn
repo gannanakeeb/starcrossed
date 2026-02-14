@@ -1,8 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=29 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://bgh70hg4coo0u" path="res://character assets/1 sky.png" id="1_3mrvk"]
 [ext_resource type="Texture2D" uid="uid://o8f24xgsl5b0" path="res://Children Map/Map Children Final/2 house bg.png" id="2_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bwob31yjnnnac" path="res://character assets/3 depth.png" id="3_llmri"]
 [ext_resource type="Texture2D" uid="uid://lhw1bge4duu5" path="res://Children Map/Map Children Final/4 house middle g.png" id="4_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://dvwqr1lfcq3xf" path="res://Children Map/Map Children Final/multiply yarab.png" id="4_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://8vbtxdliwmdh" path="res://Children Map/Map Children Final/6 middle ground.png" id="6_d2bti"]
@@ -20,9 +19,11 @@
 [ext_resource type="Script" uid="uid://iy45edhe43ea" path="res://scenes/camera2D.gd" id="17_kbc66"]
 [ext_resource type="PackedScene" uid="uid://bsosdct47xjvd" path="res://scenes/roaya.tscn" id="18_qcxrq"]
 [ext_resource type="PackedScene" uid="uid://dfyhfanfcrnij" path="res://scenes/riddle_area1children.tscn" id="19_3mrvk"]
+[ext_resource type="Script" uid="uid://dksc7b72ccrjk" path="res://scripts/riddle_background.gd" id="20_dnhyy"]
 [ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="20_llmri"]
+[ext_resource type="Texture2D" uid="uid://d3g2qnuqf5wl3" path="res://1 sky.png" id="21_b8m0v"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="22_lrpxc"]
-[ext_resource type="PackedScene" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
+[ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
 
@@ -48,10 +49,6 @@ texture = ExtResource("1_3mrvk")
 [node name="2" type="Sprite2D" parent="1"]
 position = Vector2(33, -69)
 texture = ExtResource("2_hqns4")
-
-[node name="3" type="Sprite2D" parent="1/2"]
-position = Vector2(-29, 56)
-texture = ExtResource("3_llmri")
 
 [node name="3_5" type="Sprite2D" parent="1/2"]
 modulate = Color(0.23900445, 0.23900445, 0.23900445, 1)
@@ -152,7 +149,8 @@ position = Vector2(-428, -785)
 scale = Vector2(1.44, 1.5599988)
 
 [node name="star2" parent="." instance=ExtResource("20_llmri")]
-position = Vector2(-2988, -897)
+position = Vector2(-3025.9998, -904)
+scale = Vector2(1.2399951, 1.4799988)
 
 [node name="star3" parent="." instance=ExtResource("20_llmri")]
 position = Vector2(-3360, 338)
@@ -167,26 +165,46 @@ light_mask = 2
 visibility_layer = 2
 position = Vector2(-1951, 670)
 scale = Vector2(14.184626, 28.743692)
-riddle_ui = NodePath("../CanvasLayer/riddle ui")
+riddle_ui = NodePath("../UI/riddle/RiddleUI")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="riddle background" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+script = ExtResource("20_dnhyy")
+
+[node name="Sprite2D" type="Sprite2D" parent="riddle background"]
+texture = ExtResource("21_b8m0v")
+
+[node name="UI" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="riddle ui" parent="CanvasLayer" instance=ExtResource("13_llmri")]
+[node name="riddle" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = -720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RiddleUI" parent="UI/riddle" instance=ExtResource("13_llmri")]
 light_mask = 2
 visibility_layer = 2
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -602.0
-offset_top = 198.0
-offset_right = -602.0
-offset_bottom = 198.0
-scale = Vector2(0.7889103, 0.89505893)
+layout_mode = 1
+offset_left = 206.0
+offset_top = 377.00003
+offset_right = 206.0
+offset_bottom = 377.00003
+scale = Vector2(0.36405194, 0.4560214)
 
-[node name="screen" type="Control" parent="CanvasLayer"]
+[node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
+position = Vector2(958, -432)
+conversation_file = "res://conversations/example.txt"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="screen" type="Control" parent="CanvasLayer2"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -194,11 +212,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogueSystem" parent="CanvasLayer/screen" instance=ExtResource("22_lrpxc")]
+[node name="DialogueSystem" parent="CanvasLayer2/screen" instance=ExtResource("22_lrpxc")]
 layout_mode = 1
 
-[node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
-position = Vector2(958, -432)
-conversation_file = "res://conversations/example.txt"
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(459.00012, 216.00006)
+scale = Vector2(0.4840495, -2.1655502)
 
 [connection signal="body_entered" from="riddle area" to="nader" method="_on_riddle_area_body_entered"]

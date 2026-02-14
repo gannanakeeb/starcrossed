@@ -75,3 +75,5 @@ func add_star(amount := 1):
 	print("stars", stars_collected)
 	
 	
+	
+	

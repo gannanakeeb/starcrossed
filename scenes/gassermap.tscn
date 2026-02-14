@@ -101,4 +101,10 @@ position = Vector2(-19.010218, -1.5088844)
 scale = Vector2(0.017985065, 0.023576312)
 texture = ExtResource("15_ws52y")
 
+[node name="Control" type="Control" parent="Area2D/Sprite2D2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

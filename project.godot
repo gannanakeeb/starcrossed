@@ -14,3 +14,7 @@ config/name="gasser lev 1"
 run/main_scene="uid://cyrjd4os6s63a"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://buses/default_bus_layout.tres"

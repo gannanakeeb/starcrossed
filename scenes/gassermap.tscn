@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=19 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dldagwq13nedc" path="res://gassermap/Map Gaser Final/10 lighting (set to add).png" id="11_dlmju"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
 [ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
+[ext_resource type="PackedScene" uid="uid://brbjambt1brx2" path="res://area_2d.tscn" id="15_fmdnp"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
@@ -88,10 +89,12 @@ sfx_walking = null
 position = Vector2(305.79047, -746.1556)
 zoom = Vector2(0.5, 0.5)
 
-[node name="Sprite2D2" type="Sprite2D" parent="gasser"]
-position = Vector2(4217.064, 1730.7732)
-scale = Vector2(1.7778516, 1.9230814)
-texture = ExtResource("15_ws52y")
-
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)
+
+[node name="Area2D" parent="." instance=ExtResource("15_fmdnp")]
+position = Vector2(885, -779)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
+position = Vector2(-1471.0002, 50)
+texture = ExtResource("15_ws52y")

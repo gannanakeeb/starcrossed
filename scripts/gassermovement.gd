@@ -89,7 +89,7 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 		return
 
 	if sprite.frame in footstep_frames:
-		play_sfx(sfx_walking, -12)  # Walking أصوات أخف
+		play_sfx(sfx_walking, -5)  # Walking أصوات أخف
 
 
 func add_star(amount := 1):

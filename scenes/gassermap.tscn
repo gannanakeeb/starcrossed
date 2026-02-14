@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dldagwq13nedc" path="res://gassermap/Map Gaser Final/10 lighting (set to add).png" id="11_dlmju"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
 [ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
-[ext_resource type="PackedScene" uid="uid://brbjambt1brx2" path="res://area_2d.tscn" id="15_fmdnp"]
+[ext_resource type="PackedScene" uid="uid://7l8ixr8nkg55" path="res://area_2d.tscn" id="15_fmdnp"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
@@ -93,8 +93,12 @@ zoom = Vector2(0.5, 0.5)
 position = Vector2(117, -1089)
 
 [node name="Area2D" parent="." instance=ExtResource("15_fmdnp")]
-position = Vector2(885, -779)
+position = Vector2(651, -715)
+scale = Vector2(55.601692, 42.415455)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
-position = Vector2(-1471.0002, 50)
+position = Vector2(-19.010218, -1.5088844)
+scale = Vector2(0.017985065, 0.023576312)
 texture = ExtResource("15_ws52y")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

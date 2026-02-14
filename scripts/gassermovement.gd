@@ -98,3 +98,7 @@ func add_star(amount := 1):
 
 	if stars_collected >= 3:
 		emit_signal("collected_three_stars")
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

@@ -8,4 +8,5 @@
 script = ExtResource("1_gf172")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 0)
 shape = SubResource("RectangleShape2D_nsakb")

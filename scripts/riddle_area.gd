@@ -15,7 +15,3 @@ func _on_body_entered(body):
 
 func _ready():
 	my_sprite.visible = false
-	
-	
-	
-	

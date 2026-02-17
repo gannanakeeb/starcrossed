@@ -76,7 +76,7 @@ texture = ExtResource("8_lrpxc")
 position = Vector2(-85, 4)
 
 [node name="8" type="Sprite2D" parent="1"]
-position = Vector2(20, 804)
+position = Vector2(14, 783)
 texture = ExtResource("8_flf07")
 
 [node name="9" type="Sprite2D" parent="1/8"]
@@ -205,6 +205,14 @@ conversation_file = "res://conversations/children script 1.txt"
 [node name="DialogueStarter2" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(-185, -208)
 conversation_file = "res://conversations/children script 2.txt"
+
+[node name="DialogueStarter3" parent="." instance=ExtResource("23_dnhyy")]
+position = Vector2(-2828, 510)
+conversation_file = "res://conversations/children script 3.txt"
+
+[node name="DialogueStarter4" parent="." instance=ExtResource("23_dnhyy")]
+position = Vector2(1962, 795)
+conversation_file = "res://conversations/children script 4.txt"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

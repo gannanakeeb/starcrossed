@@ -199,8 +199,12 @@ offset_bottom = 377.00003
 scale = Vector2(0.36405194, 0.4560214)
 
 [node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
-position = Vector2(958, -432)
-conversation_file = "res://conversations/example.txt"
+position = Vector2(1471, -432)
+conversation_file = "res://conversations/children script 1.txt"
+
+[node name="DialogueStarter2" parent="." instance=ExtResource("23_dnhyy")]
+position = Vector2(-185, -208)
+conversation_file = "res://conversations/children script 2.txt"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

@@ -99,6 +99,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 # دالة الـ respawn، الـ death zone يستدعيها لما اللاعب يلمسها
 func respawn():
-	if spawn_point:
-		position = spawn_point.global_position  # ارجع اللاعب لنقطة البداية
-	velocity = Vector2.ZERO  # وقف الحركة عند الـ respawn
+	print("RESPAWN CALLED!")
+	var spawn = get_tree().get_first_node_in_group("spawn_point")
+	if spawn:
+		print("Teleporting to: ", spawn.global_position)
+		position = spawn.global_position
+	else:
+		print("ERROR: No spawn point found!")
+	velocity = Vector2.ZERO# وقف الحركة عند الـ respawn

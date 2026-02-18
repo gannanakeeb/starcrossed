@@ -79,13 +79,14 @@ animations = [{
 radius = 162.98892
 height = 484.06262
 
-[node name="gasser" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["player"]]
+[node name="gasser" type="CharacterBody2D" node_paths=PackedStringArray("sprite", "spawn_point") groups=["player"]]
 position = Vector2(-58, 157)
 scale = Vector2(0.56247663, 0.5199988)
 script = ExtResource("1_77hif")
 sfx_jump = ExtResource("3_3ar0u")
 sfx_walking = ExtResource("3_baia4")
 sprite = NodePath("AnimatedSprite2D")
+spawn_point = NodePath("")
 metadata/_edit_horizontal_guides_ = [-332.0, -19.0]
 metadata/_edit_vertical_guides_ = [182.0, 46.0]
 

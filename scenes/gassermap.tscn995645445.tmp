@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=20 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
 [ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="17_fmdnp"]
-[ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="18_5rjgn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
 blend_mode = 3
@@ -103,6 +102,3 @@ position = Vector2(-901, -1312)
 
 [node name="death_zone" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-2300, -29)
-
-[node name="respawn_point" parent="." instance=ExtResource("18_5rjgn")]
-position = Vector2(-2468, -217)

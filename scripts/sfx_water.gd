@@ -1,32 +1,35 @@
-extends Area2D
-@onready var water_sound = $AudioStreamPlayer2D
+extends Area2D  # هذا السكربت مربوط على منطقة (منطقة ماء مثلاً)
 
-var target_volume = -10
-var fade_speed = 3.0
+@onready var water_sound = $AudioStreamPlayer2D  
+# هذا يمسك عقدة الصوت داخل الـ Area2D لما يبدأ المشهد
+
+var target_volume = -5  
+# هذا مستوى الصوت اللي نريد نوصل له (بالديسيبل)
+
+var fade_speed = 3.0  
+# سرعة التلاشي (كلما زادت يصير الفيد أسرع)
 
 func _ready():
-	water_sound.play()
+	water_sound.volume_db = -5  
+	# يحدد مستوى الصوت بالبداية
+
+	water_sound.play()  
+	# يشغل الصوت مباشرة أول ما يشتغل المشهد
 
 func _process(delta):
 	water_sound.volume_db = move_toward(
-	water_sound.volume_db,
-	target_volume,
-	fade_speed * 20.0 * delta
-)
+		water_sound.volume_db,  # الصوت الحالي
+		target_volume,          # الصوت المطلوب
+		fade_speed * 20.0 * delta  # سرعة التغيير التدريجي
+	)
+	# هذا يخلي الصوت ينتقل تدريجياً للقيمة المطلوبة (فيد ناعم)
 
 
-func _on_WaterZone_body_entered(body):
-	if body.is_in_group("player"):
-		target_volume = -8
-
-func _on_WaterZone_body_exited(body):
-	if body.name == "Player":
-		target_volume = -40
+func _on_body_entered(player: Node2D) -> void:
+	pass  # هذا السطر ما يسوي شي (وجوده بس شكلي)
+	print("ENTERED WATER")  # يطبع بالكونسول لما شي يدخل المنطقة
 
 
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
-
-func _on_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+func _on_body_exited(player: Node2D) -> void:
+	pass
+	print("EXITED WATER")  # يطبع لما يطلع من المنطقة

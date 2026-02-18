@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://57br65oq0gbq"]
+[gd_scene load_steps=10 format=3 uid="uid://57br65oq0gbq"]
 
 [ext_resource type="Texture2D" uid="uid://oaqii12m74la" path="res://gassermap/Map Gaser Final/7 foreground.png" id="3_wqsk0"]
 [ext_resource type="Texture2D" uid="uid://w2482lpm83u1" path="res://gassermap/Map Gaser Final/7 foregroundnew.png" id="4_v4hvw"]
@@ -22,9 +22,6 @@ size = Vector2(208, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bqxj"]
 size = Vector2(374.60052, 41.494194)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3bqxj"]
-distance = 82.99417
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
@@ -121,8 +118,3 @@ position = Vector2(-104.754875, -231.25414)
 rotation = 2.4627955
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_3bqxj")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(-290, 1684)
-scale = Vector2(13.200001, 6.8800025)
-shape = SubResource("WorldBoundaryShape2D_3bqxj")

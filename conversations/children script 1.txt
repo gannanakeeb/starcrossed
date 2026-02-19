@@ -1,0 +1,9 @@
+﻿fares,  where are we??
+fares,  I think we are lost..
+roaya,  lost, no the path is right ...
+nader,  yup, we are lost
+roaya,  wait!! I can see light there!!
+fares, let's go see, maybe it's somebody who can help
+roaya,  no no we are not following lights let's go back home
+nader,  and do you know where that is
+roaya, ....

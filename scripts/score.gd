@@ -1,10 +1,9 @@
 extends Node2D
 
 var score: int = 0  # We will use this to track the 20-point jumps
-<<<<<<< Updated upstream
-=======
+
 @onready var screen_size = get_viewport().size
->>>>>>> Stashed changes
+
 @onready var win_popup = $"../winpopup"
 
 func _ready():

@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvd51qbhnauks"]
+
+[ext_resource type="Texture2D" uid="uid://0ohc44s25x8v" path="res://character assets/Snake_spritesheet.png" id="1_i8va4"]
+[ext_resource type="Script" uid="uid://jqe8vudksw6f" path="res://scripts/maingame.gd" id="1_jxvlb"]
+[ext_resource type="Texture2D" uid="uid://dnrkg5b71idlr" path="res://character assets/grass.png" id="2_hiawh"]
+[ext_resource type="Texture2D" uid="uid://t30xg57cm3c3" path="res://character assets/mini.png" id="4_nx2sv"]
+[ext_resource type="PackedScene" uid="uid://cgv88wkivjsbc" path="res://scenes/score.tscn" id="5_60i0e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxvlb"]
+texture = ExtResource("1_i8va4")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hiawh"]
+texture = ExtResource("4_nx2sv")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k15ac"]
+tile_size = Vector2i(40, 40)
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_jxvlb")
+sources/1 = SubResource("TileSetAtlasSource_hiawh")
+
+[node name="Maingame" type="Node2D"]
+script = ExtResource("1_jxvlb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 800.0
+offset_bottom = 800.0
+texture = ExtResource("2_hiawh")
+stretch_mode = 1
+
+[node name="snake apple" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray(0, 0, 13, 0, 10, 0, 2, 0, 3, 0, 0, 0, 0, 0, 251, 255, 251, 255, 0, 0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_k15ac")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="score" parent="." instance=ExtResource("5_60i0e")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

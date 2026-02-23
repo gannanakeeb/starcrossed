@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgv88wkivjsbc"]
+
+[ext_resource type="FontFile" uid="uid://co0ax7hn8re1" path="res://character assets/PoetsenOne-Regular.ttf" id="1_8juob"]
+[ext_resource type="Script" uid="uid://osuww1o1ilsl" path="res://scripts/score.gd" id="1_bak1h"]
+
+[node name="score" type="Node2D" groups=["scoregroup"]]
+script = ExtResource("1_bak1h")
+
+[node name="score text" type="Label" parent="."]
+texture_filter = 1
+offset_left = 9.0
+offset_right = 35.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.07285132, 0.3893448, 0.26511544, 1)
+theme_override_fonts/font = ExtResource("1_8juob")
+theme_override_font_sizes/font_size = 40
+text = "0"

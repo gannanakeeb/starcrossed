@@ -6,13 +6,14 @@ var apple_pos
 var snake_body = [Vector2i(5,10),Vector2i(4,10),Vector2i(3,10)]
 var snake_direction = Vector2i(1,0)
 var add_apple = false
+var screen_size
 func _ready():
+	get_window().move_to_center()
+	# 2. Update screen size and position the score
+	screen_size = get_viewport_rect().size
 	apple_pos= place_apple()
 	draw_apple()
 	draw_snake()
-	
-	
-	
 func place_apple():
 	randomize()
 	var x = randi() %20
@@ -135,9 +136,13 @@ func _on_timer_timeout() :
 	draw_snake()
 	check_apple_eaten()
 	check_game_over()
-	
 func _process(delta):
 	check_game_over()
 	
+func _on_button_pressed() :
+	get_window().size = Vector2i(1152, 648)
+	get_window().move_to_center()
+	get_tree().paused = false
 	
-	
+	# 3. Destroy this mini-game. You will instantly be back in the main game!
+	queue_free()

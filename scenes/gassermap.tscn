@@ -101,9 +101,7 @@ texture = ExtResource("15_ws52y")
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)
 
-[node name="Area2D" parent="." instance=ExtResource("15_fmdnp")]
-position = Vector2(651, -718)
-scale = Vector2(55.601692, 42.415455)
+
 [node name="sfx_water" parent="." instance=ExtResource("16_f2fjy")]
 position = Vector2(-901, -1312)
 

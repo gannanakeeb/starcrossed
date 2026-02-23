@@ -12,10 +12,6 @@ func _ready():
 	# 2. Update screen size and position the score
 	screen_size = get_viewport_rect().size
 
-	$score.position = Vector2(400, 400)
-
-	$score.position = Vector2(400, 400)
-
 	apple_pos= place_apple()
 	draw_apple()
 	draw_snake()

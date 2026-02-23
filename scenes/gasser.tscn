@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://biya44mk8dksh" path="res://scripts/gassermovement.gd" id="1_77hif"]
 [ext_resource type="Texture2D" uid="uid://d0tx3v6q5edov" path="res://character assets/gaser final.png" id="2_77hif"]
-[ext_resource type="AudioStream" uid="uid://dyj08ya2spg5c" path="res://character assets/sfx/walking-on-dried-grass-30049.mp3.ogg" id="2_baia4"]
+[ext_resource type="AudioStream" uid="uid://spry8ctcgocf" path="res://character assets/sfx/jump on grass sfx.ogg" id="2_baia4"]
 [ext_resource type="Texture2D" uid="uid://b3ovc0i3kxdie" path="res://character assets/idle final .png" id="2_rqaon"]
-[ext_resource type="AudioStream" uid="uid://cvd1xneyxlu3a" path="res://character assets/sfx/bright-notification-352449.mp3.ogg" id="3_3ar0u"]
+[ext_resource type="AudioStream" uid="uid://be01wqlxsmaaf" path="res://character assets/sfx/SnowWalk2.ogg" id="3_baia4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_baia4"]
 atlas = ExtResource("2_rqaon")
@@ -83,8 +83,8 @@ height = 484.06262
 position = Vector2(-58, 157)
 scale = Vector2(0.56247663, 0.5199988)
 script = ExtResource("1_77hif")
-sfx_jump = ExtResource("3_3ar0u")
-sfx_walking = ExtResource("2_baia4")
+sfx_jump = ExtResource("2_baia4")
+sfx_walking = ExtResource("3_baia4")
 sprite = NodePath("AnimatedSprite2D")
 metadata/_edit_horizontal_guides_ = [-332.0, -19.0]
 metadata/_edit_vertical_guides_ = [182.0, 46.0]
@@ -93,9 +93,8 @@ metadata/_edit_vertical_guides_ = [182.0, 46.0]
 position = Vector2(252.45494, -736.54016)
 scale = Vector2(0.9315172, 0.9484722)
 sprite_frames = SubResource("SpriteFrames_sksnt")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.56134707
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(320.0133, -473.078)

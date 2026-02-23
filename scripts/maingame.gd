@@ -11,6 +11,10 @@ func _ready():
 	get_window().move_to_center()
 	# 2. Update screen size and position the score
 	screen_size = get_viewport_rect().size
+<<<<<<< Updated upstream
+=======
+	$score.position = Vector2(400, 400)
+>>>>>>> Stashed changes
 	apple_pos= place_apple()
 	draw_apple()
 	draw_snake()

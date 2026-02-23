@@ -37,6 +37,7 @@ sources/0 = SubResource("TileSetAtlasSource_jxvlb")
 sources/1 = SubResource("TileSetAtlasSource_hiawh")
 
 [node name="Maingame" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_jxvlb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -56,4 +57,42 @@ autostart = true
 
 [node name="score" parent="." instance=ExtResource("5_60i0e")]
 
+[node name="winpopup" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="winpopup"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -85.0
+offset_right = 150.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="winpopup/Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 42.0
+offset_right = 254.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 40
+text = "YOU WIN!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="winpopup/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 71.0
+grow_vertical = 0
+text = "RETURN"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="winpopup/Panel/Button" to="." method="_on_button_pressed"]

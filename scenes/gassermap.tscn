@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=25 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -15,9 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
 [ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
-[ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
 [ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="17_death"]
+[ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
+[ext_resource type="PackedScene" uid="uid://7l8ixr8nkg55" path="res://scenes/area_2d.tscn" id="18_23i61"]
 [ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="18_respawn"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="19_dialoguebox"]
 [ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="20_dialoguestarter"]
@@ -101,23 +102,25 @@ texture = ExtResource("15_ws52y")
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)
 
-
 [node name="sfx_water" parent="." instance=ExtResource("16_f2fjy")]
 position = Vector2(-901, -1312)
 
 [node name="death_zone" parent="." instance=ExtResource("17_death")]
 position = Vector2(-2300, -29)
 
+[node name="Area2D" parent="." instance=ExtResource("18_23i61")]
+position = Vector2(846, -680)
+scale = Vector2(30.718458, 45.454254)
+
 [node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
-position = Vector2(-21.402227, -1.2966976)
-scale = Vector2(0.017985065, 0.023576312)
+position = Vector2(-48.92824, -1.2100058)
+scale = Vector2(0.040946554, 0.029690119)
 texture = ExtResource("15_ws52y")
 
 [node name="portal" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -338.99997)
 scale = Vector2(0.48000088, 0.40000182)
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
 position = Vector2(-2468, -217)
 

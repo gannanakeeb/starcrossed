@@ -3,8 +3,8 @@ extends Node2D
 var score: int = 0  # We will use this to track the 20-point jumps
 
 @onready var screen_size = get_viewport().size
-
 @onready var win_popup = $"../winpopup"
+
 
 func _ready():
 	$".".position = Vector2(650, 750)
@@ -22,14 +22,12 @@ func _draw():
 	var label_node =$"."
 	var score_width =$"." .get_rect().size.x + label_node.get_combined_minimum_size().x - 20
 
-	
 	var bg_rect = Rect2(label_node.position.x-5 , label_node.position.y +5 , score_width, 40)
 	
 	# Drawing the background box
 	draw_rect(bg_rect, Color8(166, 209, 60))
 	draw_rect(bg_rect, Color8(56, 74, 12), false, 2.0) # Added '2.0' for line thickness
 	
-
 func trigger_win():
 	print("You reached 100 points!")
 	get_tree().paused = true 

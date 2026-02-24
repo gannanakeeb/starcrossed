@@ -88,10 +88,10 @@ position = Vector2(-3466, -851)
 position = Vector2(-3096, -2088)
 
 [node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
-position = Vector2(1623, -1291)
+position = Vector2(1703, -1300)
 
 [node name="Camera2D" type="Camera2D" parent="gasser"]
-position = Vector2(296.9012, -803.848)
+position = Vector2(328.90253, -769.23254)
 scale = Vector2(-7585.707, -2028.7229)
 zoom = Vector2(0.8, 0.8)
 
@@ -141,7 +141,7 @@ offset_right = 1113.0
 offset_bottom = 604.0
 
 [node name="DialogueStarter" parent="." instance=ExtResource("20_dialoguestarter")]
-position = Vector2(1795, -1595)
+position = Vector2(1789, -1521)
 conversation_file = "res://conversations/gasser script 1.txt"
 
 [node name="DialogueStarter2" parent="." instance=ExtResource("20_dialoguestarter")]

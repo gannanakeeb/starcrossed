@@ -88,11 +88,12 @@ position = Vector2(-3466, -851)
 position = Vector2(-3096, -2088)
 
 [node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
-position = Vector2(1628.9999, -1274)
+position = Vector2(1623, -1291)
 
 [node name="Camera2D" type="Camera2D" parent="gasser"]
-position = Vector2(305.79047, -746.1556)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(296.9012, -803.848)
+scale = Vector2(-7585.707, -2028.7229)
+zoom = Vector2(0.8, 0.8)
 
 [node name="Sprite2D2" type="Sprite2D" parent="gasser"]
 position = Vector2(4217.064, 1730.7732)

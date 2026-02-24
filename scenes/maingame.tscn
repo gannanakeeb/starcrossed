@@ -40,6 +40,13 @@ sources/1 = SubResource("TileSetAtlasSource_hiawh")
 process_mode = 3
 script = ExtResource("1_jxvlb")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 3000.0
+offset_bottom = 3000.0
+color = Color(0, 0, 0, 0.5568628)
+
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 800.0
 offset_bottom = 800.0

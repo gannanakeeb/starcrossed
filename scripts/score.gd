@@ -6,7 +6,7 @@ var score: int = 0  # We will use this to track the 20-point jumps
 @onready var win_popup = $"../winpopup"
 
 func _ready():
-	$"score text".position = Vector2(750, 750)
+	$"score text".position = Vector2(680, 750)
 # Change this function to handle the math
 func update_score(_snake_length):
 	score += 20 

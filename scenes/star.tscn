@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1ohewpn1jj6x"]
+[gd_scene load_steps=22 format=3 uid="uid://b1ohewpn1jj6x"]
 
 [ext_resource type="Script" uid="uid://dwcxagkwhojtx" path="res://scripts/star.gd" id="1_e2x7v"]
 [ext_resource type="Texture2D" uid="uid://cn0pd73b2548m" path="res://character assets/stars png.png" id="2_e2x7v"]
+[ext_resource type="AudioStream" uid="uid://cvd1xneyxlu3a" path="res://character assets/sfx/bright-notification-352449.mp3.ogg" id="3_ef0hr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6vao"]
 atlas = ExtResource("2_e2x7v")
@@ -120,7 +121,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"star animation",
-"speed": 7.0
+"speed": 5.5
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wiuhm"]
@@ -129,13 +130,19 @@ radius = 8.062258
 [node name="star" type="Area2D"]
 script = ExtResource("1_e2x7v")
 
+[node name="star_collect_sfx" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(39.5, 109.500015)
+scale = Vector2(0.925, 0.68691593)
+stream = ExtResource("3_ef0hr")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(39.5, 109.500015)
 scale = Vector2(0.925, 0.68691593)
 sprite_frames = SubResource("SpriteFrames_kmfvt")
 animation = &"star animation"
 autoplay = "star animation"
-frame_progress = 0.162688
+frame_progress = 0.555761
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(42, 114)

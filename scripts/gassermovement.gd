@@ -102,8 +102,10 @@ func respawn():
 	print("RESPAWN CALLED!")
 	var spawn = get_tree().get_first_node_in_group("spawn_point")
 	if spawn:
-		print("Teleporting to: ", spawn.global_position)
-		position = spawn.global_position
+		print("Spawn global_position: ", spawn.global_position)
+		print("Player position before: ", global_position)
+		global_position = spawn.global_position
+		print("Player position after: ", global_position)
 	else:
 		print("ERROR: No spawn point found!")
-	velocity = Vector2.ZERO# وقف الحركة عند الـ respawn
+	velocity = Vector2.ZERO

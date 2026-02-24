@@ -76,22 +76,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jklgs"]
-radius = 162.98892
+radius = 86.92746
 height = 484.06262
 
 [node name="gasser" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["player"]]
 position = Vector2(-58, 157)
 scale = Vector2(0.56247663, 0.5199988)
 script = ExtResource("1_77hif")
+speed = 350.0
+gravity = 1150.0
 sfx_jump = ExtResource("2_baia4")
 sfx_walking = ExtResource("3_baia4")
 sprite = NodePath("AnimatedSprite2D")
-metadata/_edit_horizontal_guides_ = [-332.0, -19.0]
-metadata/_edit_vertical_guides_ = [182.0, 46.0]
+metadata/_edit_horizontal_guides_ = [-332.0, -19.0, -288.0]
+metadata/_edit_vertical_guides_ = [182.0, 46.0, 84.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(252.45494, -736.54016)
-scale = Vector2(0.9315172, 0.9484722)
+position = Vector2(280.90057, -613.463)
+scale = Vector2(0.6706924, 0.66393054)
 sprite_frames = SubResource("SpriteFrames_sksnt")
 animation = &"idle"
 autoplay = "idle"

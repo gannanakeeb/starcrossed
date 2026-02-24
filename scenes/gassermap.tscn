@@ -30,7 +30,9 @@ blend_mode = 3
 blend_mode = 1
 
 [node name="gassermap" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [-8.0]
+position = Vector2(3723, 3013)
+metadata/_edit_horizontal_guides_ = [-8.0, -3036.0, -3015.0, 3005.0, 2814.0]
+metadata/_edit_vertical_guides_ = [-3722.0, -3732.0, 3951.0, 1273.0]
 
 [node name="1Skynew" type="Sprite2D" parent="."]
 position = Vector2(117, -1512)
@@ -87,6 +89,24 @@ position = Vector2(-3466, -851)
 [node name="star3" parent="." instance=ExtResource("10_ysndr")]
 position = Vector2(-3096, -2088)
 
+[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
+position = Vector2(1690, -1301)
+
+[node name="Camera2D" type="Camera2D" parent="gasser"]
+position = Vector2(328.90253, -769.23254)
+scale = Vector2(-7585.707, -2028.7229)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 7660
+limit_bottom = 3000
+
+[node name="Sprite2D2" type="Sprite2D" parent="gasser"]
+visible = false
+position = Vector2(4217.064, 1730.7732)
+scale = Vector2(1.7778516, 1.9230814)
+texture = ExtResource("15_ws52y")
+
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)
 
@@ -122,15 +142,17 @@ position = Vector2(-1776, -338.99997)
 scale = Vector2(0.48000088, 0.40000182)
 
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
-position = Vector2(-2468, -217)
+position = Vector2(-2489, -381)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 3723.0
+offset_top = 3013.0
+offset_right = 3763.0
+offset_bottom = 3053.0
 
 [node name="DialogueSystem" parent="CanvasLayer/Control" instance=ExtResource("19_dialoguebox")]
 layout_mode = 1
@@ -140,7 +162,7 @@ offset_right = 1113.0
 offset_bottom = 604.0
 
 [node name="DialogueStarter" parent="." instance=ExtResource("20_dialoguestarter")]
-position = Vector2(1795, -1595)
+position = Vector2(1789, -1521)
 conversation_file = "res://conversations/gasser script 1.txt"
 
 [node name="DialogueStarter2" parent="." instance=ExtResource("20_dialoguestarter")]

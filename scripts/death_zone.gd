@@ -10,3 +10,4 @@ func _on_body_entered(body):
 		body.respawn()
 	else:
 		print("Body doesn't have respawn method!")
+		

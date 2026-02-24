@@ -102,7 +102,16 @@ limit_right = 7660
 limit_bottom = 3000
 
 [node name="Sprite2D2" type="Sprite2D" parent="gasser"]
+position = Vector2(4217.064, 1730.7732)
+scale = Vector2(1.7778516, 1.9230814)
+texture = ExtResource("15_ws52y")
+
+[node name="Camera2D2" type="Camera2D" parent="gasser"]
 visible = false
+position = Vector2(305.79047, -746.1556)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Sprite2D3" type="Sprite2D" parent="gasser"]
 position = Vector2(4217.064, 1730.7732)
 scale = Vector2(1.7778516, 1.9230814)
 texture = ExtResource("15_ws52y")
@@ -125,17 +134,9 @@ position = Vector2(-48.92824, -1.2100058)
 scale = Vector2(0.040946554, 0.029690119)
 texture = ExtResource("15_ws52y")
 
-[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
+[node name="gasser2" parent="." instance=ExtResource("13_w2lsn")]
+visible = false
 position = Vector2(1628.9999, -1274)
-
-[node name="Camera2D" type="Camera2D" parent="gasser"]
-position = Vector2(305.79047, -746.1556)
-zoom = Vector2(0.5, 0.5)
-
-[node name="Sprite2D2" type="Sprite2D" parent="gasser"]
-position = Vector2(4217.064, 1730.7732)
-scale = Vector2(1.7778516, 1.9230814)
-texture = ExtResource("15_ws52y")
 
 [node name="portal" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -338.99997)

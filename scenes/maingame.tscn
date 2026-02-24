@@ -59,6 +59,7 @@ autostart = true
 position = Vector2(-1, -4)
 
 [node name="winpopup" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Panel" type="Panel" parent="winpopup"]
 process_mode = 3

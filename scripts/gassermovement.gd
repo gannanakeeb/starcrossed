@@ -83,7 +83,7 @@ func _on_animated_sprite_2d_frame_changed() -> void:
 	if sprite.animation != "walk":
 		return
 	if sprite.frame in footstep_frames:
-		play_sfx(sfx_walking, -10)
+		play_sfx(sfx_walking, -20)
 
 
 func add_star(amount := 1):

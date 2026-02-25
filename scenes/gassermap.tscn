@@ -139,7 +139,6 @@ position = Vector2(-2489, -381)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 3723.0
@@ -148,7 +147,6 @@ offset_right = 3763.0
 offset_bottom = 3053.0
 
 [node name="DialogueSystem" parent="CanvasLayer/Control" instance=ExtResource("19_dialoguebox")]
-visible = false
 layout_mode = 1
 offset_left = -3.0
 offset_top = 404.0
@@ -183,6 +181,7 @@ position = Vector2(2849, -1317)
 texture = ExtResource("25_m3pij")
 
 [node name="Layer2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(907, -1832)
 skew = -0.034906626
 texture = ExtResource("25_m3pij")

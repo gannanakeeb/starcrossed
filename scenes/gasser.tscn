@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://biya44mk8dksh" path="res://scripts/gassermovement.gd" id="1_77hif"]
 [ext_resource type="Texture2D" uid="uid://d0tx3v6q5edov" path="res://character assets/gaser final.png" id="2_77hif"]
-[ext_resource type="AudioStream" uid="uid://spry8ctcgocf" path="res://character assets/sfx/jump on grass sfx.ogg" id="2_baia4"]
+[ext_resource type="AudioStream" uid="uid://spry8ctcgocf" path="res://sfx/jump on grass sfx.ogg" id="2_baia4"]
 [ext_resource type="Texture2D" uid="uid://b3ovc0i3kxdie" path="res://character assets/idle final .png" id="2_rqaon"]
-[ext_resource type="AudioStream" uid="uid://be01wqlxsmaaf" path="res://character assets/sfx/SnowWalk2.ogg" id="3_baia4"]
+[ext_resource type="AudioStream" uid="uid://be01wqlxsmaaf" path="res://sfx/SnowWalk2.ogg" id="3_baia4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_baia4"]
 atlas = ExtResource("2_rqaon")
@@ -77,7 +77,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jklgs"]
 radius = 86.92746
-height = 484.06262
+height = 441.3513
 
 [node name="gasser" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["player"]]
 position = Vector2(-58, 157)
@@ -99,7 +99,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(320.0133, -473.078)
+position = Vector2(321.79114, -461.5396)
 scale = Vector2(0.49085116, -0.5402999)
 shape = SubResource("CapsuleShape2D_jklgs")
 

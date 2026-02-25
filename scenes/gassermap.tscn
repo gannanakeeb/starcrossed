@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=29 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -22,11 +22,17 @@
 [ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="18_respawn"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="19_dialoguebox"]
 [ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="20_dialoguestarter"]
+[ext_resource type="PackedScene" uid="uid://186mad87pccb" path="res://scenes/Ambience_sfx.tscn" id="23_ci03i"]
+[ext_resource type="PackedScene" uid="uid://cfoxmeim4j3np" path="res://scenes/ost_1.tscn" id="24_ejmul"]
+[ext_resource type="Texture2D" uid="uid://do2iedqmn1kro" path="res://scenes/Layer 2.png" id="25_m3pij"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
 blend_mode = 3
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ci03i"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_23i61"]
 blend_mode = 1
 
 [node name="gassermap" type="Node2D"]
@@ -55,6 +61,10 @@ texture = ExtResource("4_ws52y")
 position = Vector2(117, -1088)
 texture = ExtResource("5_ws52y")
 
+[node name="8FrontOfCh" type="Sprite2D" parent="."]
+position = Vector2(117, -1088)
+texture = ExtResource("9_vs67v")
+
 [node name="5Backgroundnew" type="Sprite2D" parent="."]
 position = Vector2(117, -1512)
 texture = ExtResource("6_f2fjy")
@@ -67,12 +77,8 @@ texture = ExtResource("7_fmdnp")
 position = Vector2(117, -1512)
 texture = ExtResource("8_fmdnp")
 
-[node name="8FrontOfCh" type="Sprite2D" parent="."]
-position = Vector2(117, -1088)
-texture = ExtResource("9_vs67v")
-
 [node name="9Clouds" type="Sprite2D" parent="."]
-position = Vector2(117, -1088)
+position = Vector2(116, -1089)
 texture = ExtResource("10_xvat7")
 
 [node name="10Lighting(setToAdd)" type="Sprite2D" parent="."]
@@ -90,7 +96,7 @@ position = Vector2(-3466, -851)
 position = Vector2(-3096, -2088)
 
 [node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
-position = Vector2(1690, -1301)
+position = Vector2(1727, -1302)
 
 [node name="Camera2D" type="Camera2D" parent="gasser"]
 position = Vector2(328.90253, -769.23254)
@@ -100,21 +106,6 @@ limit_left = 0
 limit_top = 0
 limit_right = 7660
 limit_bottom = 3000
-
-[node name="Sprite2D2" type="Sprite2D" parent="gasser"]
-position = Vector2(4217.064, 1730.7732)
-scale = Vector2(1.7778516, 1.9230814)
-texture = ExtResource("15_ws52y")
-
-[node name="Camera2D2" type="Camera2D" parent="gasser"]
-visible = false
-position = Vector2(305.79047, -746.1556)
-zoom = Vector2(0.5, 0.5)
-
-[node name="Sprite2D3" type="Sprite2D" parent="gasser"]
-position = Vector2(4217.064, 1730.7732)
-scale = Vector2(1.7778516, 1.9230814)
-texture = ExtResource("15_ws52y")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(117, -1089)
@@ -148,6 +139,7 @@ position = Vector2(-2489, -381)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 3723.0
@@ -156,6 +148,7 @@ offset_right = 3763.0
 offset_bottom = 3053.0
 
 [node name="DialogueSystem" parent="CanvasLayer/Control" instance=ExtResource("19_dialoguebox")]
+visible = false
 layout_mode = 1
 offset_left = -3.0
 offset_top = 404.0
@@ -177,3 +170,24 @@ conversation_file = "res://conversations/gasser script 3.txt"
 [node name="DialogueStarter4" parent="." instance=ExtResource("20_dialoguestarter")]
 position = Vector2(2111, -327)
 conversation_file = "res://conversations/gasser script 4.txt"
+
+[node name="Ambience_sfx" parent="." instance=ExtResource("23_ci03i")]
+
+[node name="ost1" parent="." instance=ExtResource("24_ejmul")]
+max_distance = 4096.0
+
+[node name="151" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_23i61")
+position = Vector2(2849, -1317)
+texture = ExtResource("25_m3pij")
+
+[node name="Layer2" type="Sprite2D" parent="."]
+position = Vector2(907, -1832)
+skew = -0.034906626
+texture = ExtResource("25_m3pij")
+
+[node name="Layer2Bone2D" type="Bone2D" parent="Layer2"]
+position = Vector2(-23.733442, 336.2048)
+rotation = -1.3089969
+scale = Vector2(19.62496, -2796713)

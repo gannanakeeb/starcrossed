@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bd4wym5s00u50"
+path="res://.godot/imported/children of stars.ogg-617318fa5e6b0214a530f3e4d420188a.oggvorbisstr"
+
+[deps]
+
+source_file="res://sfx/children of stars.ogg"
+dest_files=["res://.godot/imported/children of stars.ogg-617318fa5e6b0214a530f3e4d420188a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

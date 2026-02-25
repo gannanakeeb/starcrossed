@@ -32,6 +32,7 @@ position = Vector2(-1, -423)
 texture = ExtResource("4_v4hvw")
 
 [node name="7Foreground" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-1, 0)
 texture = ExtResource("3_wqsk0")
 

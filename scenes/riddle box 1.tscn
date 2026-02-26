@@ -360,9 +360,9 @@ scale = Vector2(2, 2)
 
 [node name="back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 328.0
+offset_left = 533.0
 offset_top = -60.0
-offset_right = 558.0
+offset_right = 763.0
 offset_bottom = 40.0
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_3fmjg")
@@ -370,9 +370,9 @@ text = "Back"
 
 [node name="clear" type="Button" parent="."]
 layout_mode = 0
-offset_left = -142.0
+offset_left = 280.0
 offset_top = -62.0
-offset_right = 88.0
+offset_right = 510.0
 offset_bottom = 38.0
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_c8fre")

@@ -17,14 +17,15 @@ func _ready():
 		if btn is TextureButton:
 			btn.pressed.connect(_on_zodiac_button_pressed.bind(btn))
 			
-		$clear.pressed.connect(_on_clear_pressed)
-		$back.pressed.connect(_on_back_pressed)
+	$clear.pressed.connect(_on_clear_pressed)
+	$back.pressed.connect(_on_back_pressed)
+	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	set_anchors_preset(Control.PRESET_FULL_RECT)
 
 func show_riddle():
 
 	print("UI SCRIPT: show_riddle() was called successfully!") 
 	visible = true
-	RenderingServer.set_default_clear_color(Color.RED)
 	player_answer.clear()
 
 func hide_riddle():
@@ -109,4 +110,3 @@ func _on_clear_pressed() :
 	for child in $"input display".get_children():
 		child.queue_free() # Safely removes the node from the scene
 	print("All symbols cleared.")
-	

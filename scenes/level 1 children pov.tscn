@@ -169,7 +169,6 @@ riddle_ui = NodePath("../UI/riddle/RiddleUI")
 
 [node name="riddle background" type="CanvasLayer" parent="."]
 layer = 2
-visible = false
 script = ExtResource("20_dnhyy")
 
 [node name="Sprite2D" type="Sprite2D" parent="riddle background"]
@@ -177,25 +176,29 @@ texture = ExtResource("21_b8m0v")
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 100
+offset = Vector2(340, 230)
+transform = Transform2D(1, 0, 0, 1, 340, 230)
 
 [node name="riddle" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1280.0
-offset_bottom = -720.0
+offset_left = 14.0
+offset_top = 316.0
+offset_right = 14.0
+offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.2, 1.2)
 
 [node name="RiddleUI" parent="UI/riddle" instance=ExtResource("13_llmri")]
 light_mask = 2
 visibility_layer = 2
 layout_mode = 1
-offset_left = 102.0
-offset_top = 378.0
-offset_right = 102.0
-offset_bottom = 378.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 scale = Vector2(0.5, 0.5)
 
 [node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
@@ -228,7 +231,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(459.00012, 216.00006)
+position = Vector2(564, 263)
 scale = Vector2(0.4840495, -2.1655502)
 
 [connection signal="body_entered" from="riddle area" to="nader" method="_on_riddle_area_body_entered"]

@@ -192,11 +192,11 @@ grow_vertical = 2
 light_mask = 2
 visibility_layer = 2
 layout_mode = 1
-offset_left = 206.0
-offset_top = 377.00003
-offset_right = 206.0
-offset_bottom = 377.00003
-scale = Vector2(0.36405194, 0.4560214)
+offset_left = 102.0
+offset_top = 378.0
+offset_right = 102.0
+offset_bottom = 378.0
+scale = Vector2(0.5, 0.5)
 
 [node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(1471, -432)

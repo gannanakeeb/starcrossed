@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvd1xneyxlu3a"
+path="res://.godot/imported/star collect sfx.ogg-af6ff22cd560f871da1a44e57f7d6c20.oggvorbisstr"
+
+[deps]
+
+source_file="res://sfx/world Ambience/star collect sfx.ogg"
+dest_files=["res://.godot/imported/star collect sfx.ogg-af6ff22cd560f871da1a44e57f7d6c20.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

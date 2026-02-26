@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://baxaogtqnw2ed"]
+[gd_scene load_steps=15 format=3 uid="uid://baxaogtqnw2ed"]
 
 [ext_resource type="Script" uid="uid://biya44mk8dksh" path="res://scripts/gassermovement.gd" id="1_77hif"]
 [ext_resource type="Texture2D" uid="uid://d0tx3v6q5edov" path="res://character assets/gaser final.png" id="2_77hif"]
 [ext_resource type="AudioStream" uid="uid://spry8ctcgocf" path="res://sfx/jump on grass sfx.ogg" id="2_baia4"]
 [ext_resource type="Texture2D" uid="uid://b3ovc0i3kxdie" path="res://character assets/idle final .png" id="2_rqaon"]
-[ext_resource type="AudioStream" uid="uid://be01wqlxsmaaf" path="res://sfx/SnowWalk2.ogg" id="3_baia4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_baia4"]
 atlas = ExtResource("2_rqaon")
@@ -86,7 +85,6 @@ script = ExtResource("1_77hif")
 speed = 350.0
 gravity = 1150.0
 sfx_jump = ExtResource("2_baia4")
-sfx_walking = ExtResource("3_baia4")
 sprite = NodePath("AnimatedSprite2D")
 metadata/_edit_horizontal_guides_ = [-332.0, -19.0, -288.0]
 metadata/_edit_vertical_guides_ = [182.0, 46.0, 84.0]
@@ -105,6 +103,7 @@ shape = SubResource("CapsuleShape2D_jklgs")
 
 [node name="sfx_gasser" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
+max_distance = 4096.0
 bus = &"sfx_gasser"
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://186mad87pccb"]
 
-[ext_resource type="AudioStream" uid="uid://bhetojy2ymw18" path="res://sfx/Ambience, Historical, Army Encampment, Soldiers, Armor Rustling, Marching, Summer, Nature Layer (Stereo) SND127672.wav" id="1_6s0k6"]
+[ext_resource type="AudioStream" uid="uid://bhetojy2ymw18" path="res://sfx/world Ambience/Ambience.wav" id="1_6s0k6"]
 [ext_resource type="Script" uid="uid://c0t6yrpcfcdia" path="res://scripts/audio_stream_player_2d.gd" id="2_6anj4"]
 
 [node name="Ambience_sfx" type="AudioStreamPlayer2D"]

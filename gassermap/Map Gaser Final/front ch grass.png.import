@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d05ng5klenago"
-path="res://.godot/imported/151.jpg-4ed55c485e6f7d4ed6e6d3cae70556bb.ctex"
+uid="uid://okjm46vojrun"
+path="res://.godot/imported/front ch grass.png-d602137adef88627e7c12ce0bc14fca3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/151.jpg"
-dest_files=["res://.godot/imported/151.jpg-4ed55c485e6f7d4ed6e6d3cae70556bb.ctex"]
+source_file="res://gassermap/Map Gaser Final/front ch grass.png"
+dest_files=["res://.godot/imported/front ch grass.png-d602137adef88627e7c12ce0bc14fca3.ctex"]
 
 [params]
 

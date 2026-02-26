@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do2iedqmn1kro"
-path="res://.godot/imported/Layer 2.png-07cbdb0d35f02ee84e906ccf0c4f465c.ctex"
+uid="uid://cbd8h8cjhk0ci"
+path="res://.godot/imported/6 other.png-e43a47e6266f4c5e98b45cb74098ca6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Layer 2.png"
-dest_files=["res://.godot/imported/Layer 2.png-07cbdb0d35f02ee84e906ccf0c4f465c.ctex"]
+source_file="res://gassermap/Map Gaser Final/6 other.png"
+dest_files=["res://.godot/imported/6 other.png-e43a47e6266f4c5e98b45cb74098ca6b.ctex"]
 
 [params]
 

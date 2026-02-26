@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://74v1mulgwwkq"]
+[gd_scene load_steps=31 format=3 uid="uid://74v1mulgwwkq"]
 
 [ext_resource type="Texture2D" uid="uid://bdg4sy5pttccq" path="res://character assets/aq.png" id="1_j113f"]
 [ext_resource type="Script" uid="uid://lmqxtb236ata" path="res://scenes/riddle_1.gd" id="1_t6vwt"]
@@ -156,10 +156,32 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.8392157, 0.93333334, 0.23921569, 0.73333335)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fmjg"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8392157, 0.93333334, 0.23921569, 0.73333335)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8fre"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8392157, 0.93333334, 0.23921569, 0.73333335)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="riddle ui" type="Control"]
 layout_mode = 3
@@ -311,10 +333,10 @@ script = ExtResource("3_pnjgo")
 
 [node name="submit Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 793.0
-offset_top = -114.0
-offset_right = 1037.0
-offset_bottom = -10.0
+offset_left = 786.0
+offset_top = -63.0
+offset_right = 1030.0
+offset_bottom = 41.0
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_s21fw")
 text = "submit"
@@ -327,6 +349,34 @@ offset_right = 1074.0
 offset_bottom = -621.0
 theme_override_font_sizes/font_size = 85
 text = " FATE will move you forward"
+
+[node name="input display" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -84.0
+offset_top = -138.0
+offset_right = -44.0
+offset_bottom = -98.0
+scale = Vector2(2, 2)
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = -60.0
+offset_right = 558.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fmjg")
+text = "Back"
+
+[node name="clear" type="Button" parent="."]
+layout_mode = 0
+offset_left = -142.0
+offset_top = -62.0
+offset_right = 88.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_c8fre")
+text = "Clear"
 
 [connection signal="pressed" from="HBoxContainer/PanelContainer/aq" to="." method="_on_aq_pressed"]
 [connection signal="pressed" from="HBoxContainer/PanelContainer2/pi" to="." method="_on_pi_pressed"]
@@ -341,3 +391,5 @@ text = " FATE will move you forward"
 [connection signal="pressed" from="HBoxContainer2/PanelContainer5/sag" to="." method="_on_sag_pressed"]
 [connection signal="pressed" from="HBoxContainer2/PanelContainer6/cap" to="." method="_on_cap_pressed"]
 [connection signal="pressed" from="submit Button" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="clear" to="." method="_on_clear_pressed"]

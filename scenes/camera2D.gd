@@ -10,7 +10,10 @@ func _process(delta: float) -> void:
 @onready var player = $"../Player"
 @onready var riddle_focus = $"../RiddleArea/RiddleFocusPoint"
 
+var _follow_target: Node2D = null
+
 func _ready() -> void:
+	_follow_target = target  # save whatever was assigned in the inspector
 	var dialogue_system := _find_dialogue_system(get_tree().root)
 	if dialogue_system:
 		dialogue_system.camera_pan_requested.connect(_on_camera_pan_requested)
@@ -27,6 +30,9 @@ func _find_dialogue_system(node: Node) -> DialogueSystem:
 func _on_camera_pan_requested(pan_target: Node2D) -> void:
 	if tween:
 		tween.kill()
+	if pan_target == null:
+		target = _follow_target  # restore original follow target from inspector
+		return
 	target = null  # stop following player so _process doesn't fight the tween
 	tween = create_tween()
 	tween.tween_property(self, "global_position", pan_target.global_position, 0.8)

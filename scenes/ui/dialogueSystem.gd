@@ -78,9 +78,8 @@ func display_current_dialogue():
 
 	var entry = conversation[current_index]
 
-	# Emit camera pan signal if a target is assigned
-	if entry.camera_target != null:
-		camera_pan_requested.emit(entry.camera_target)
+	# Emit on every line — null tells the camera to return to player
+	camera_pan_requested.emit(entry.camera_target)
 
 	# Set the speaker's sprite and color
 	if characters.has(entry.name):

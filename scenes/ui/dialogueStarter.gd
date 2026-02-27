@@ -6,7 +6,7 @@ extends Area2D
 		conversation_file = value
 		_refresh_from_file()
 
-var camera_targets: Array[Node2D] = []
+@export var camera_targets: Array[Node2D] = []
 var _line_labels: Array[String] = []
 
 var dialogue_system: DialogueSystem
@@ -14,15 +14,6 @@ var is_done: bool = false
 
 func _get_property_list() -> Array[Dictionary]:
 	var props: Array[Dictionary] = []
-	# Save the array without showing it directly
-	props.append({
-		"name": "camera_targets",
-		"type": TYPE_ARRAY,
-		"usage": PROPERTY_USAGE_STORAGE,
-		"hint": PROPERTY_HINT_ARRAY_TYPE,
-		"hint_string": "Node2D",
-	})
-	# One labeled Node2D slot per line
 	for label in _line_labels:
 		props.append({
 			"name": label,
@@ -34,18 +25,12 @@ func _get_property_list() -> Array[Dictionary]:
 	return props
 
 func _get(property: StringName) -> Variant:
-	if property == &"camera_targets":
-		return camera_targets
 	var idx := _line_labels.find(str(property))
 	if idx >= 0:
 		return camera_targets[idx] if idx < camera_targets.size() else null
 	return null
 
 func _set(property: StringName, value) -> bool:
-	if property == &"camera_targets":
-		camera_targets = value
-		notify_property_list_changed()
-		return true
 	var idx := _line_labels.find(str(property))
 	if idx >= 0:
 		while camera_targets.size() <= idx:
@@ -88,7 +73,6 @@ func _refresh_from_file():
 
 	_line_labels = labels
 
-	# Grow to match line count — never shrink to preserve existing assignments
 	while camera_targets.size() < _line_labels.size():
 		camera_targets.append(null)
 

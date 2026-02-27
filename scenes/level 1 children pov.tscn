@@ -234,7 +234,7 @@ position = Vector2(-785, -120)
 [node name="DialogueStarter3" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("23_dnhyy")]
 position = Vector2(-2822, 510)
 conversation_file = "res://conversations/children script 3.txt"
-camera_targets = [null, NodePath("RIDDLE MARKER"), null]
+camera_targets = [null, null, null]
 
 [node name="RIDDLE MARKER" type="Node2D" parent="DialogueStarter3"]
 position = Vector2(1671, -113)

@@ -244,10 +244,12 @@ camera_targets = [null, null, null]
 [node name="RIDDLE MARKER" type="Node2D" parent="DialogueStarter3"]
 position = Vector2(1671, -113)
 
-[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("cloud_node") instance=ExtResource("23_dnhyy")]
+[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("cloud_node", "camera_targets") instance=ExtResource("23_dnhyy")]
 position = Vector2(1958, 806)
 script = ExtResource("26_mq6gd")
 cloud_node = NodePath("../1/8/GameClouds")
+conversation_file = "res://conversations/children script 4.txt"
+camera_targets = [NodePath("house node"), null]
 
 [node name="house node" type="Node2D" parent="DialogueStarter4"]
 position = Vector2(1190, -662)

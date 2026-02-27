@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=32 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://bgh70hg4coo0u" path="res://character assets/1 sky.png" id="1_3mrvk"]
 [ext_resource type="Texture2D" uid="uid://o8f24xgsl5b0" path="res://Children Map/Map Children Final/2 house bg.png" id="2_hqns4"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bwrscq2xi6r4w" path="res://Children Map/Map Children Final/lightng.png" id="11_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://cmm3axndvis45" path="res://character assets/game clouds.png" id="12_d0558"]
 [ext_resource type="PackedScene" uid="uid://74v1mulgwwkq" path="res://scenes/riddle box 1.tscn" id="13_llmri"]
+[ext_resource type="Script" uid="uid://kqc17xtobeh7" path="res://scripts/game_clouds.gd" id="13_wce0o"]
 [ext_resource type="PackedScene" uid="uid://domt710wudly5" path="res://scenes/foreground collision .tscn" id="14_lp6ye"]
 [ext_resource type="PackedScene" uid="uid://050q51eopcuy" path="res://scenes/nader.tscn" id="15_3e800"]
 [ext_resource type="PackedScene" uid="uid://dhosqa1pswb8i" path="res://scenes/fares.tscn" id="15_v42f7"]
@@ -25,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://d3g2qnuqf5wl3" path="res://1 sky.png" id="21_b8m0v"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="22_lrpxc"]
 [ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
+[ext_resource type="Script" uid="uid://babqy6wpgef25" path="res://scenes/ui/dialogue_starter cloud.gd" id="26_mq6gd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
 
@@ -93,6 +95,7 @@ texture = ExtResource("11_0h7mo")
 [node name="GameClouds" type="Sprite2D" parent="1/8"]
 position = Vector2(-7, -811)
 texture = ExtResource("12_d0558")
+script = ExtResource("13_wce0o")
 
 [node name="collisoon" parent="." instance=ExtResource("14_lp6ye")]
 position = Vector2(119, 5)
@@ -174,10 +177,10 @@ riddle_ui = NodePath("../UI/riddle/RiddleUI")
 
 [node name="riddle background" type="CanvasLayer" parent="."]
 layer = 2
+visible = false
 script = ExtResource("20_dnhyy")
 
 [node name="Sprite2D" type="Sprite2D" parent="riddle background"]
-visible = false
 texture = ExtResource("21_b8m0v")
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -220,8 +223,8 @@ position = Vector2(-2828, 510)
 conversation_file = "res://conversations/children script 3.txt"
 
 [node name="DialogueStarter4" parent="." instance=ExtResource("23_dnhyy")]
-position = Vector2(1962, 795)
-conversation_file = "res://conversations/children script 4.txt"
+position = Vector2(2673, 767)
+script = ExtResource("26_mq6gd")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -241,3 +244,6 @@ position = Vector2(564, 263)
 scale = Vector2(0.4840495, -2.1655502)
 
 [connection signal="body_entered" from="riddle area" to="nader" method="_on_riddle_area_body_entered"]
+[connection signal="body_entered" from="DialogueStarter3" to="DialogueStarter3" method="_on_body_entered"]
+[connection signal="body_entered" from="DialogueStarter4" to="nader" method="_on_dialogue_starter_4_body_entered"]
+[connection signal="body_entered" from="DialogueStarter4" to="DialogueStarter4" method="_on_body_entered"]

@@ -1,6 +1,7 @@
 extends Area2D
 
 @export_file("*.txt") var conversation_file: String
+@export var cloud_node: Sprite2D
 
 var dialogue_system: DialogueSystem
 var is_done: bool = false
@@ -22,20 +23,19 @@ func _find_dialogue_system(node: Node) -> DialogueSystem:
 	return null
 
 func _on_body_entered(body):
-	if is_done:
+	print("Area2D: Something touched me! It was: ", body.name) # ADD THIS LINE
+	if is_done or (body.name != "nader" and body.name != "fares"):
 		return
-
-	# Mark as done
+	
 	is_done = true
-
+	if cloud_node and cloud_node.has_method("disperse_clouds"):
+		cloud_node.disperse_clouds()
+	# Mark as done
 	# Load and start conversation
 	if conversation_file != "" and dialogue_system:
 		var conversation = load_conversation_from_file(conversation_file)
 		dialogue_system.start(conversation)
-		
-
-		  
-	  
+	
 
 func load_conversation_from_file(file_path: String) -> Array[DialogueSystem.DialogueEntry]:
 	var conversation: Array[DialogueSystem.DialogueEntry] = []

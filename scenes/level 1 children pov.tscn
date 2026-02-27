@@ -122,11 +122,10 @@ shape = SubResource("RectangleShape2D_qcxrq")
 position = Vector2(2767, 1225)
 shape = SubResource("RectangleShape2D_qcxrq")
 
-[node name="nader" parent="." groups=["player"] instance=ExtResource("15_3e800")]
-position = Vector2(1447, -482)
+[node name="nader" parent="." node_paths=PackedStringArray("main_character") instance=ExtResource("15_3e800")]
+position = Vector2(1890, -460)
 scale = Vector2(0.6, 0.6)
-collision_layer = 3
-collision_mask = 2
+main_character = NodePath("../Roaya")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("16_qcxrq")]
 position = Vector2(0, 4)
@@ -137,15 +136,12 @@ collision_layer = 3
 position = Vector2(349.00003, 1596.0001)
 scale = Vector2(1.3, 1.3)
 
-[node name="fares" parent="." node_paths=PackedStringArray("main_character") instance=ExtResource("15_v42f7")]
-position = Vector2(1611.0001, -477.00003)
+[node name="fares" parent="." groups=["player"] instance=ExtResource("15_v42f7")]
+position = Vector2(1571, -453)
 scale = Vector2(0.6, 0.6)
-collision_layer = 1
-collision_mask = 1
-main_character = NodePath("../nader")
 
 [node name="Roaya" parent="." node_paths=PackedStringArray("main_character") instance=ExtResource("18_qcxrq")]
-position = Vector2(1737, -560)
+position = Vector2(1710, -456)
 scale = Vector2(0.6, 0.6)
 main_character = NodePath("../fares")
 
@@ -163,7 +159,7 @@ scale = Vector2(1.6483078, 1.9736565)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
 script = ExtResource("17_kbc66")
-target = NodePath("../nader")
+target = NodePath("../fares")
 follow_smoothing = 2.0
 
 [node name="riddle area" parent="." node_paths=PackedStringArray("riddle_ui") instance=ExtResource("19_3mrvk")]

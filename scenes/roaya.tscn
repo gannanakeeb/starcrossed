@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://bsosdct47xjvd"]
+[gd_scene load_steps=21 format=3 uid="uid://bsosdct47xjvd"]
 
 [ext_resource type="Script" uid="uid://2k78g7stk2l6" path="res://scenes/CharacterController.gd" id="1_be3ph"]
 [ext_resource type="Texture2D" uid="uid://bh6k15kuw56rc" path="res://character assets/Roaya.png" id="1_oixd6"]
 [ext_resource type="Texture2D" uid="uid://dert3iet7pdd" path="res://character assets/roaya idle.png" id="2_e037e"]
 [ext_resource type="Texture2D" uid="uid://dmkrw41fegips" path="res://character assets/roaya jump.png" id="3_be3ph"]
 [ext_resource type="AudioStream" uid="uid://ba1vj6lp4t011" path="res://character assets/walking-on-dried-grass-30049.wav" id="5_jwpp7"]
-[ext_resource type="Script" uid="uid://d15yvx0lj4dkf" path="res://scripts/sound effect walk.gd" id="6_s16hl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_be3ph"]
 atlas = ExtResource("1_oixd6")
@@ -117,7 +116,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_be3ph"]
-radius = 53.0
+radius = 44.0
 height = 266.0
 
 [node name="Roaya" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
@@ -128,17 +127,14 @@ sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(40.875004, 163.37497)
+position = Vector2(30, -18)
 scale = Vector2(0.772096, 0.74004775)
 sprite_frames = SubResource("SpriteFrames_s16hl")
-animation = &"jump"
+animation = &"idle"
 autoplay = "default"
-frame_progress = 0.68610126
 
 [node name="walk roaya" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
 stream = ExtResource("5_jwpp7")
-script = ExtResource("6_s16hl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16, 177)
 shape = SubResource("CapsuleShape2D_be3ph")

@@ -240,7 +240,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwt3f"]
 radius = 44.0
-height = 238.0
+height = 266.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0exop"]
 atlas = ExtResource("6_vmu1f")
@@ -323,16 +323,13 @@ frame_progress = 0.009327444
 
 [node name="colored walking" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(30, -18.000004)
+position = Vector2(27, -19.000015)
 scale = Vector2(0.7961538, 0.79951304)
 sprite_frames = SubResource("SpriteFrames_ggmll")
-animation = &"jump"
+animation = &"idle"
 autoplay = "default"
-frame_progress = 0.85927206
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(17, 12)
 shape = SubResource("CapsuleShape2D_wwt3f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -6,10 +6,30 @@ extends Camera2D
 func _process(delta: float) -> void:
 	if target != null:
 		global_position = global_position.lerp(target.global_position, follow_smoothing * delta)
-	
 
 @onready var player = $"../Player"
 @onready var riddle_focus = $"../RiddleArea/RiddleFocusPoint"
+
+func _ready() -> void:
+	var dialogue_system := _find_dialogue_system(get_tree().root)
+	if dialogue_system:
+		dialogue_system.camera_pan_requested.connect(_on_camera_pan_requested)
+
+func _find_dialogue_system(node: Node) -> DialogueSystem:
+	if node is DialogueSystem:
+		return node
+	for child in node.get_children():
+		var result = _find_dialogue_system(child)
+		if result:
+			return result
+	return null
+
+func _on_camera_pan_requested(pan_target: Node2D) -> void:
+	if tween:
+		tween.kill()
+	target = null  # stop following player so _process doesn't fight the tween
+	tween = create_tween()
+	tween.tween_property(self, "global_position", pan_target.global_position, 0.8)
 
 var normal_zoom := Vector2(1, 1)
 var riddle_zoom := Vector2(2, 2)

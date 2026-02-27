@@ -1,4 +1,4 @@
-﻿extends Control
+extends Control
 class_name DialogueSystem
 
 # Character class
@@ -24,17 +24,19 @@ var characters: Dictionary = {
 class DialogueEntry:
 	var name: String
 	var text: String
-	
-	func _init(character_name: String, dialogue_text: String):
+	var camera_target: Node2D
+
+	func _init(character_name: String, dialogue_text: String, target: Node2D = null):
 		name = character_name
 		text = dialogue_text
+		camera_target = target
 
+signal camera_pan_requested(target: Node2D)
 
-# Current conversation (array of DialogueEntry)
+# Current conversation
 var conversation: Array[DialogueEntry] = []
 var current_index: int = 0
 
-# Reference to the TextureRect that shows the current speaker
 @export var speaker_portrait: TextureRect
 @export var listener1_portrait: TextureRect
 @export var listener2_portrait: TextureRect
@@ -48,24 +50,19 @@ var current_index: int = 0
 # Text speed (characters per second)
 @export var text_speed: float = 20.0
 
-# Hardcoded conversation
 var is_typing: bool = false
 var full_text: String = ""
 
 func _ready():
-	# Hide dialogue system on start
 	hide_dialogue()
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-			# Only process clicks if dialogue is active
 			if visible and conversation.size() > 0:
 				if is_typing:
-					# Show all text instantly
 					show_full_text()
 				else:
-					# Go to next dialogue
 					next_dialogue()
 
 func start(new_conversation: Array[DialogueEntry]):
@@ -80,6 +77,10 @@ func display_current_dialogue():
 		return
 
 	var entry = conversation[current_index]
+
+	# Emit camera pan signal if a target is assigned
+	if entry.camera_target != null:
+		camera_pan_requested.emit(entry.camera_target)
 
 	# Set the speaker's sprite and color
 	if characters.has(entry.name):
@@ -119,7 +120,6 @@ func start_typewriter(plain_text: String):
 
 	while char_index < plain_text.length():
 		if not is_typing:
-			# Typing was interrupted, show full text
 			break
 
 		char_index += 1
@@ -144,7 +144,6 @@ func end_conversation():
 	is_typing = false
 	conversation.clear()
 	current_index = 0
-	# Clear the UI
 	character_name_label.text = ""
 	dialogue_text.text = ""
 	hide_dialogue()

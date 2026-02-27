@@ -207,21 +207,29 @@ offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(0.5, 0.5)
 
+[node name="stars marker" type="Node2D" parent="."]
+position = Vector2(-1730.2065, -944.3928)
+
 [node name="DialogueStarter" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(1471, -432)
 conversation_file = "res://conversations/children script 1.txt"
+camera_targets = Array[Node2D]([null, null, null, null, Object(Node2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(-1730.2065, -944.3928),"rotation":0.0,"scale":Vector2(1, 1),"skew":0.0,"script":null)
+, null, null, null, null])
 
 [node name="DialogueStarter2" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(-185, -208)
 conversation_file = "res://conversations/children script 2.txt"
+camera_targets = Array[Node2D]([null, null])
 
 [node name="DialogueStarter3" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(-2828, 510)
 conversation_file = "res://conversations/children script 3.txt"
+camera_targets = Array[Node2D]([null, null, null])
 
 [node name="DialogueStarter4" parent="." instance=ExtResource("23_dnhyy")]
 position = Vector2(1962, 795)
 conversation_file = "res://conversations/children script 4.txt"
+camera_targets = Array[Node2D]([null])
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

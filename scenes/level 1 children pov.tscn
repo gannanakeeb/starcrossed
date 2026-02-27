@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=32 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://bgh70hg4coo0u" path="res://character assets/1 sky.png" id="1_3mrvk"]
 [ext_resource type="Texture2D" uid="uid://o8f24xgsl5b0" path="res://Children Map/Map Children Final/2 house bg.png" id="2_hqns4"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://d3g2qnuqf5wl3" path="res://1 sky.png" id="21_b8m0v"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="22_lrpxc"]
 [ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
+[ext_resource type="Script" uid="uid://bhs118lhihtp4" path="res://scenes/ui/cloud.gd" id="26_mq6gd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
 
@@ -125,10 +126,14 @@ shape = SubResource("RectangleShape2D_qcxrq")
 [node name="fares" parent="." groups=["player"] instance=ExtResource("15_v42f7")]
 position = Vector2(1571, -453)
 scale = Vector2(0.6, 0.6)
+collision_layer = 1
+collision_mask = 1
 
 [node name="nader" parent="." node_paths=PackedStringArray("main_character") instance=ExtResource("15_3e800")]
 position = Vector2(1890, -460)
 scale = Vector2(0.6, 0.6)
+collision_layer = 2
+collision_mask = 2
 main_character = NodePath("../Roaya")
 
 [node name="StaticBody2D" parent="." instance=ExtResource("16_qcxrq")]
@@ -239,10 +244,10 @@ camera_targets = [null, NodePath("RIDDLE MARKER"), null]
 [node name="RIDDLE MARKER" type="Node2D" parent="DialogueStarter3"]
 position = Vector2(1671, -113)
 
-[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("23_dnhyy")]
+[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("cloud_node") instance=ExtResource("23_dnhyy")]
 position = Vector2(1958, 806)
-conversation_file = "res://conversations/children script 4.txt"
-camera_targets = [NodePath("house node"), null, null]
+script = ExtResource("26_mq6gd")
+cloud_node = NodePath("../1/8/GameClouds")
 
 [node name="house node" type="Node2D" parent="DialogueStarter4"]
 position = Vector2(1190, -662)
@@ -264,5 +269,5 @@ layout_mode = 1
 position = Vector2(564, 263)
 scale = Vector2(0.4840495, -2.1655502)
 
-[connection signal="body_entered" from="riddle area" to="nader" method="_on_riddle_area_body_entered"]
+[connection signal="body_entered" from="riddle area" to="fares" method="_on_riddle_area_body_entered"]
 [connection signal="body_entered" from="DialogueStarter3" to="DialogueStarter3" method="_on_body_entered"]

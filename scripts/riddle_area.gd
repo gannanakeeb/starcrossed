@@ -8,11 +8,10 @@ func _ready():
 	print("Riddle UI reference:", riddle_ui)
 
 
-
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
-		return   
-
+		return  
+		
 	print("👤 Player entered riddle area")
 
 	print("Riddle Area check! Player has: ", body.stars_collected)

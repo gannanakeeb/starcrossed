@@ -77,3 +77,7 @@ func add_star(amount := 1):
 	
 	
 	
+
+
+func _on_riddle_area_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

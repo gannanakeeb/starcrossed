@@ -93,7 +93,7 @@ position = Vector2(-21, 6)
 texture = ExtResource("11_0h7mo")
 
 [node name="GameClouds" type="Sprite2D" parent="1/8"]
-position = Vector2(-7, -811)
+position = Vector2(-46, -577)
 texture = ExtResource("12_d0558")
 script = ExtResource("13_wce0o")
 
@@ -165,6 +165,7 @@ position = Vector2(-3360, 338)
 scale = Vector2(1.6483078, 1.9736565)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target")]
+position = Vector2(7038, 4262)
 limit_left = -3707
 limit_top = -1900
 limit_right = 3975
@@ -226,9 +227,10 @@ conversation_file = "res://conversations/children script 2.txt"
 position = Vector2(-2828, 510)
 conversation_file = "res://conversations/children script 3.txt"
 
-[node name="DialogueStarter4" parent="." instance=ExtResource("23_dnhyy")]
+[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("cloud_node") instance=ExtResource("23_dnhyy")]
 position = Vector2(2673, 767)
 script = ExtResource("26_mq6gd")
+cloud_node = NodePath("../1/8/GameClouds")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

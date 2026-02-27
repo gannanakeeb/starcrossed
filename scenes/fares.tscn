@@ -238,8 +238,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dpspy"]
-radius = 65.0
-height = 294.0
+radius = 44.0
+height = 266.0
 
 [node name="fares" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 collision_layer = 2
@@ -260,11 +260,11 @@ sprite_frames = SubResource("SpriteFrames_pqxpn")
 frame_progress = 0.9517445
 
 [node name="colored running" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, 0)
+position = Vector2(13.000001, -3.0000002)
+scale = Vector2(0.8108766, 0.839669)
 sprite_frames = SubResource("SpriteFrames_md187")
-animation = &"jump"
+animation = &"idle"
 autoplay = "default"
-frame_progress = 0.8992319
 
 [node name="colored walking" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -272,6 +272,4 @@ sprite_frames = SubResource("SpriteFrames_ly1wv")
 frame_progress = 0.0374878
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-44, 16)
 shape = SubResource("CapsuleShape2D_dpspy")

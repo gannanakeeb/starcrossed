@@ -121,8 +121,8 @@ shape = SubResource("RectangleShape2D_qcxrq")
 [node name="fares" parent="." groups=["player"] instance=ExtResource("15_v42f7")]
 position = Vector2(1571, -453)
 scale = Vector2(0.6, 0.6)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 1
+collision_mask = 1
 
 [node name="nader" parent="." node_paths=PackedStringArray("main_character") instance=ExtResource("15_3e800")]
 position = Vector2(1890, -460)
@@ -207,8 +207,6 @@ grow_vertical = 2
 scale = Vector2(1.2, 1.2)
 
 [node name="RiddleUI" parent="UI/riddle" instance=ExtResource("13_llmri")]
-light_mask = 2
-visibility_layer = 2
 layout_mode = 1
 offset_top = 0.0
 offset_right = 0.0

@@ -12,10 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://c3gx8iweoredg" path="res://gassermap/Map Gaser Final/grass.png" id="10_gxtnq"]
 [ext_resource type="Texture2D" uid="uid://vxq6400umqd4" path="res://gassermap/Map Gaser Final/9 clouds.png" id="10_xvat7"]
 [ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="10_ysndr"]
-[ext_resource type="Texture2D" uid="uid://dldagwq13nedc" path="res://gassermap/Map Gaser Final/10 lighting (set to add).png" id="11_dlmju"]
 [ext_resource type="Texture2D" uid="uid://cjkp34pyt1lke" path="res://gassermap/Map Gaser Final/tree .png" id="12_ggyl6"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
-[ext_resource type="Texture2D" uid="uid://d2lmghdwdds2w" path="res://gassermap/Map Gaser Final/Light.png" id="14_ula2a"]
+[ext_resource type="Texture2D" uid="uid://siaa0six8rv7" path="res://gassermap/Map Gaser Final/light 1.png" id="14_65w8m"]
 [ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
 [ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
@@ -24,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
 [ext_resource type="Texture2D" uid="uid://cmejuutmsux5q" path="res://gassermap/Map Gaser Final/cover for water .png" id="17_ggyl6"]
 [ext_resource type="Texture2D" uid="uid://b1d400kwgeyb7" path="res://gassermap/Map Gaser Final/water.png" id="17_gxtnq"]
+[ext_resource type="Texture2D" uid="uid://ckorla67r4jy" path="res://gassermap/Map Gaser Final/light 2_.png" id="17_ld1cn"]
 [ext_resource type="PackedScene" uid="uid://7l8ixr8nkg55" path="res://scenes/area_2d.tscn" id="18_23i61"]
 [ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="18_respawn"]
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="19_dialoguebox"]
@@ -52,7 +52,7 @@ shader_parameter/Windstrength = 5.0000011875000006
 shader = ExtResource("6_m3pij")
 shader_parameter/Windstrength = 20.0
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ci03i"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ula2a"]
 blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vk8jv"]
@@ -122,17 +122,10 @@ texture = ExtResource("12_ggyl6")
 position = Vector2(116, -1086.5)
 texture = ExtResource("10_xvat7")
 
-[node name="10Lighting(setToAdd)" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("CanvasItemMaterial_ci03i")
-position = Vector2(117, -1085.5)
-texture = ExtResource("11_dlmju")
-
-[node name="Light" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("CanvasItemMaterial_vk8jv")
-position = Vector2(1055, -2010)
-texture = ExtResource("14_ula2a")
+[node name="Light1" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_ula2a")
+position = Vector2(1055, -1258)
+texture = ExtResource("14_65w8m")
 
 [node name="Platform" type="Sprite2D" parent="."]
 position = Vector2(-630, -1153.5)
@@ -152,8 +145,8 @@ limit_bottom = 3000
 
 [node name="Light2" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_vk8jv")
-position = Vector2(1055, -2009)
-texture = ExtResource("14_ula2a")
+position = Vector2(166, -2301)
+texture = ExtResource("17_ld1cn")
 
 [node name="Water" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_65w8m")
@@ -250,5 +243,4 @@ position = Vector2(0, 2.5)
 max_distance = 4096.0
 
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
-visible = false
 position = Vector2(120, -1089)

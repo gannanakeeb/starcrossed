@@ -139,8 +139,8 @@ scale = Vector2(0.925, 0.68691593)
 stream = ExtResource("3_ef0hr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(39.5, 109.500015)
-scale = Vector2(0.925, 0.68691593)
+position = Vector2(41.000004, 106)
+scale = Vector2(0.925, 0.7725857)
 sprite_frames = SubResource("SpriteFrames_kmfvt")
 animation = &"star animation"
 autoplay = "star animation"

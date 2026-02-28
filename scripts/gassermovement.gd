@@ -96,13 +96,11 @@ func play_sfx(stream: AudioStream, volume_db: float = 0):
 
 # بتشتغل أوتوماتيك كل ما الفريم يتغير في الأنيميشن
 func _on_animated_sprite_2d_frame_changed() -> void:
-	print("frame changed: ", sprite.frame, " anim: ", sprite.animation)  # للتجربة، نشوف الفريمات بتتغير
 	# لو مش في أنيميشن المشي، مشغلش صوت
 	if sprite.animation != "walk":
 		return
 	# لو الفريم الحالي هو 2 أو 4 (1 أو 3 في جودو)، شغّل صوت خطوة
 	if sprite.frame in footstep_frames:
-		print("PLAYING FOOTSTEP: ", step_index)  # للتجربة، نتأكد إن الصوت بيشتغل
 		sfx_player.stream = footsteps[step_index]  # اختار الصوت الحالي
 		sfx_player.volume_db = -5  # مستوى الصوت
 		sfx_player.pitch_scale = randf_range(0.95, 1.05)  # تغيير بسيط في النبرة عشان ميبانش مكرر

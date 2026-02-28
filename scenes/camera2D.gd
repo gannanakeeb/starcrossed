@@ -7,8 +7,8 @@ func _process(delta: float) -> void:
 	if target != null:
 		global_position = global_position.lerp(target.global_position, follow_smoothing * delta)
 
-@onready var player = $"../Player"
-@onready var riddle_focus = $"../RiddleArea/RiddleFocusPoint"
+@export var player: Node2D                                                                                                                                                                                                                  
+@export var riddle_focus: Node2D
 
 var _follow_target: Node2D = null
 

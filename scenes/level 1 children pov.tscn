@@ -1,17 +1,16 @@
-[gd_scene load_steps=35 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=34 format=3 uid="uid://dqtfagie3q5mr"]
 
-[ext_resource type="Texture2D" uid="uid://bxm6j8ss04ntf" path="res://gassermap/Map Gaser Final/1 sky.png" id="1_3mrvk"]
-[ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bv0hakp5y58lt" path="res://gassermap/Map Gaser Final/3 depth.png" id="3_d0558"]
-[ext_resource type="Texture2D" uid="uid://bcbaok4cmemrw" path="res://gassermap/Map Gaser Final/4 house middle g.png" id="4_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://ek7od6biqlpc" path="res://Children Map/Map Children Final/2 house bg.png" id="2_nx31k"]
+[ext_resource type="Texture2D" uid="uid://bwob31yjnnnac" path="res://character assets/3 depth.png" id="3_nx31k"]
 [ext_resource type="Texture2D" uid="uid://dvwqr1lfcq3xf" path="res://Children Map/Map Children Final/multiply yarab.png" id="4_x0ka3"]
-[ext_resource type="Texture2D" uid="uid://kkytb8jxbbve" path="res://gassermap/Map Gaser Final/6 middle ground.png" id="6_d2bti"]
-[ext_resource type="Texture2D" uid="uid://5soal5f4brvh" path="res://gassermap/Map Gaser Final/5 background.png" id="6_llmri"]
-[ext_resource type="Texture2D" uid="uid://oaqii12m74la" path="res://gassermap/Map Gaser Final/7 foreground.png" id="8_lrpxc"]
-[ext_resource type="PackedScene" path="res://scenes/boat.tscn" id="9_0h7mo"]
-[ext_resource type="Texture2D" uid="uid://vxq6400umqd4" path="res://gassermap/Map Gaser Final/9 clouds.png" id="9_k73cj"]
-[ext_resource type="Texture2D" uid="uid://bwrscq2xi6r4w" path="res://Children Map/Map Children Final/lightng.png" id="11_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://lhw1bge4duu5" path="res://Children Map/Map Children Final/4 house middle g.png" id="5_lq3jv"]
+[ext_resource type="Texture2D" uid="uid://cehkmryynmqpo" path="res://character assets/5 background.png" id="6_lq3jv"]
+[ext_resource type="Texture2D" uid="uid://8vbtxdliwmdh" path="res://Children Map/Map Children Final/6 middle ground.png" id="7_nx31k"]
+[ext_resource type="Texture2D" uid="uid://b8c3rq1is57bq" path="res://character assets/7 foreground.png" id="8_kinm6"]
+[ext_resource type="PackedScene" uid="uid://ds01ris6abqt5" path="res://scenes/boat.tscn" id="9_0h7mo"]
 [ext_resource type="Texture2D" uid="uid://cmm3axndvis45" path="res://character assets/game clouds.png" id="12_d0558"]
+[ext_resource type="Texture2D" uid="uid://caouv4lcwvk6a" path="res://Children Map/Map Children Final/9 clouds.png" id="12_kinm6"]
+[ext_resource type="Texture2D" uid="uid://cmg2gvw0db367" path="res://Children Map/Map Children Final/10 lighting.png" id="13_i10e2"]
 [ext_resource type="PackedScene" uid="uid://74v1mulgwwkq" path="res://scenes/riddle box 1.tscn" id="13_llmri"]
 [ext_resource type="Script" uid="uid://kqc17xtobeh7" path="res://scripts/game_clouds.gd" id="13_wce0o"]
 [ext_resource type="PackedScene" uid="uid://domt710wudly5" path="res://scenes/foreground collision .tscn" id="14_lp6ye"]
@@ -49,59 +48,51 @@ metadata/_edit_horizontal_guides_ = [-2856.0]
 
 [node name="1" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_nr8wp")
-position = Vector2(132, -405)
-texture = ExtResource("1_3mrvk")
+position = Vector2(134, -426)
+texture = ExtResource("21_b8m0v")
 
 [node name="2" type="Sprite2D" parent="1"]
-position = Vector2(33, -69)
-texture = ExtResource("2_hqns4")
+texture = ExtResource("2_nx31k")
 
 [node name="3" type="Sprite2D" parent="1/2"]
-position = Vector2(-28, 483)
-texture = ExtResource("3_d0558")
+texture = ExtResource("3_nx31k")
 
 [node name="3_5" type="Sprite2D" parent="1/2"]
 modulate = Color(0.23900445, 0.23900445, 0.23900445, 1)
 material = SubResource("CanvasItemMaterial_d2bti")
-position = Vector2(-24, 464)
 texture = ExtResource("4_x0ka3")
 
 [node name="4" type="Sprite2D" parent="1"]
-position = Vector2(17, 399)
-texture = ExtResource("4_0h7mo")
+position = Vector2(0, 429)
+texture = ExtResource("5_lq3jv")
 
 [node name="5" type="Sprite2D" parent="1"]
-position = Vector2(0, -31)
-texture = ExtResource("6_llmri")
+texture = ExtResource("6_lq3jv")
 
 [node name="6" type="Sprite2D" parent="1"]
-position = Vector2(-4, 385)
-texture = ExtResource("6_d2bti")
+position = Vector2(-34, 413)
+texture = ExtResource("7_nx31k")
 
 [node name="7" type="Sprite2D" parent="1"]
-position = Vector2(0, -20)
-texture = ExtResource("8_lrpxc")
+texture = ExtResource("8_kinm6")
 
 [node name="StaticBody2D" parent="1/7" instance=ExtResource("9_0h7mo")]
-position = Vector2(-85, 407)
+position = Vector2(-346, 394)
 
 [node name="8" type="Sprite2D" parent="1"]
-position = Vector2(1, 426)
 
 [node name="GameClouds" type="Sprite2D" parent="1/8"]
-position = Vector2(-46, -577)
 texture = ExtResource("12_d0558")
 script = ExtResource("13_wce0o")
 
 [node name="9" type="Sprite2D" parent="1"]
-position = Vector2(35, 388)
-texture = ExtResource("9_k73cj")
+position = Vector2(-1, 427)
+texture = ExtResource("12_kinm6")
 
 [node name="10" type="Sprite2D" parent="1/9"]
 modulate = Color(1, 1, 1, 0.7058824)
 material = SubResource("CanvasItemMaterial_ta5nu")
-position = Vector2(-31, 6)
-texture = ExtResource("11_0h7mo")
+texture = ExtResource("13_i10e2")
 
 [node name="collisoon" parent="." instance=ExtResource("14_lp6ye")]
 position = Vector2(133, 1)
@@ -119,11 +110,11 @@ polygon = PackedVector2Array(455, -658, 471, -662, 1015, -663, 1025, -659, 1016,
 one_way_collision = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="platform 1"]
-position = Vector2(2755, -2257)
+position = Vector2(2693, -1795)
 shape = SubResource("RectangleShape2D_qcxrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="platform 1"]
-position = Vector2(2767, 1225)
+position = Vector2(2687, 1243)
 shape = SubResource("RectangleShape2D_qcxrq")
 
 [node name="fares" parent="." groups=["player"] instance=ExtResource("15_v42f7")]
@@ -154,11 +145,11 @@ scale = Vector2(0.6, 0.6)
 main_character = NodePath("../fares")
 
 [node name="star" parent="." instance=ExtResource("20_llmri")]
-position = Vector2(-428, -785)
+position = Vector2(-437, -796.99994)
 scale = Vector2(1.44, 1.5599988)
 
 [node name="star2" parent="." instance=ExtResource("20_llmri")]
-position = Vector2(-3025.9998, -904)
+position = Vector2(-3039, -899)
 scale = Vector2(1.2399951, 1.4799988)
 
 [node name="star3" parent="." instance=ExtResource("20_llmri")]
@@ -166,25 +157,26 @@ position = Vector2(-3360, 338)
 scale = Vector2(1.6483078, 1.9736565)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "player", "riddle_focus")]
-position = Vector2(3389, 867)
+position = Vector2(-316, -715)
 limit_left = -3707
-limit_top = -1900
+limit_top = -1086
 limit_right = 3975
 limit_bottom = 1100
 script = ExtResource("17_kbc66")
 target = NodePath("../fares")
 follow_smoothing = 2.0
 player = NodePath("../fares")
-riddle_focus = NodePath("../riddle area")
+riddle_focus = NodePath("../DialogueStarter3/RIDDLE MARKER")
 
 [node name="star 1" type="Node2D" parent="Camera2D"]
 position = Vector2(-420, -865)
 
-[node name="riddle area" parent="." instance=ExtResource("19_3mrvk")]
+[node name="riddle area" parent="." node_paths=PackedStringArray("my_sprite") instance=ExtResource("19_3mrvk")]
 light_mask = 2
 visibility_layer = 2
 position = Vector2(-1951, 670)
 scale = Vector2(14.184626, 28.743692)
+my_sprite = NodePath("../riddle background/Sprite2D")
 
 [node name="riddle background" type="CanvasLayer" parent="."]
 layer = 2

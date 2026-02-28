@@ -1,0 +1,231 @@
+[gd_scene load_steps=40 format=3 uid="uid://cyrjd4os6s63a"]
+
+[ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
+[ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
+[ext_resource type="Texture2D" uid="uid://c28q0mommlxpf" path="res://gassermap/Map Gaser Final/2.5 depth (set to multiply)new.png" id="3_ysndr"]
+[ext_resource type="Texture2D" uid="uid://cdr2od7gjr2mk" path="res://gassermap/Map Gaser Final/3 depthnew.png" id="4_ws52y"]
+[ext_resource type="Texture2D" uid="uid://bcbaok4cmemrw" path="res://gassermap/Map Gaser Final/4 house middle g.png" id="5_ws52y"]
+[ext_resource type="Texture2D" uid="uid://bas3am3rv28i1" path="res://gassermap/Map Gaser Final/5 backgroundnew.png" id="6_f2fjy"]
+[ext_resource type="Shader" uid="uid://dmv4vsll503kt" path="res://tree shaders(L_R).tres" id="6_m3pij"]
+[ext_resource type="Texture2D" uid="uid://cbd8h8cjhk0ci" path="res://gassermap/Map Gaser Final/6 other.png" id="9_pp740"]
+[ext_resource type="Texture2D" uid="uid://bhauttxsvq2qt" path="res://gassermap/Map Gaser Final/8 front of ch.png" id="9_vs67v"]
+[ext_resource type="Texture2D" uid="uid://c3gx8iweoredg" path="res://gassermap/Map Gaser Final/grass.png" id="10_gxtnq"]
+[ext_resource type="Texture2D" uid="uid://vxq6400umqd4" path="res://gassermap/Map Gaser Final/9 clouds.png" id="10_xvat7"]
+[ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="10_ysndr"]
+[ext_resource type="Texture2D" uid="uid://dldagwq13nedc" path="res://gassermap/Map Gaser Final/10 lighting (set to add).png" id="11_dlmju"]
+[ext_resource type="Texture2D" uid="uid://cjkp34pyt1lke" path="res://gassermap/Map Gaser Final/tree .png" id="12_ggyl6"]
+[ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
+[ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
+[ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
+[ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
+[ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
+[ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="17_death"]
+[ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
+[ext_resource type="Texture2D" uid="uid://cmejuutmsux5q" path="res://gassermap/Map Gaser Final/cover for water .png" id="17_ggyl6"]
+[ext_resource type="Texture2D" uid="uid://b1d400kwgeyb7" path="res://gassermap/Map Gaser Final/water.png" id="17_gxtnq"]
+[ext_resource type="PackedScene" uid="uid://7l8ixr8nkg55" path="res://scenes/area_2d.tscn" id="18_23i61"]
+[ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="18_respawn"]
+[ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="19_dialoguebox"]
+[ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="20_dialoguestarter"]
+[ext_resource type="Texture2D" uid="uid://7e3g4qhp1ljm" path="res://gassermap/Map Gaser Final/black .png" id="20_vk8jv"]
+[ext_resource type="PackedScene" uid="uid://186mad87pccb" path="res://scenes/Ambience_sfx.tscn" id="23_ci03i"]
+[ext_resource type="PackedScene" uid="uid://cfoxmeim4j3np" path="res://scenes/ost_1.tscn" id="24_ejmul"]
+[ext_resource type="Texture2D" uid="uid://okjm46vojrun" path="res://gassermap/Map Gaser Final/front ch grass.png" id="30_ggyl6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
+blend_mode = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_haye3"]
+shader = ExtResource("6_m3pij")
+shader_parameter/Windstrength = -4.9999992875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pp740"]
+shader = ExtResource("6_m3pij")
+shader_parameter/Windstrength = -6.9999993825
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h1qps"]
+shader = ExtResource("6_m3pij")
+shader_parameter/Windstrength = 5.0000011875000006
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk8jv"]
+shader = ExtResource("6_m3pij")
+shader_parameter/Windstrength = 10.000001425
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ci03i"]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ula2a"]
+shader = ExtResource("6_m3pij")
+shader_parameter/Windstrength = -6.9999993825
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h1qps"]
+
+[node name="gassermap" type="Node2D"]
+position = Vector2(3723, 3013)
+metadata/_edit_horizontal_guides_ = [-8.0, -3036.0, -3015.0, 3005.0, 2814.0]
+metadata/_edit_vertical_guides_ = [-3722.0, -3732.0, 3951.0, 1273.0]
+
+[node name="1Skynew" type="Sprite2D" parent="."]
+position = Vector2(117, -1512)
+texture = ExtResource("1_w2lsn")
+
+[node name="2HouseBg" type="Sprite2D" parent="."]
+position = Vector2(117, -1088)
+texture = ExtResource("2_ko041")
+
+[node name="2_5Depth(setToMultiply)new" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_5rjgn")
+position = Vector2(117, -1511)
+texture = ExtResource("3_ysndr")
+
+[node name="3Depthnew" type="Sprite2D" parent="."]
+position = Vector2(117, -1512)
+texture = ExtResource("4_ws52y")
+
+[node name="4HouseMiddleG" type="Sprite2D" parent="."]
+position = Vector2(117, -1088)
+texture = ExtResource("5_ws52y")
+
+[node name="8FrontOfCh" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_haye3")
+position = Vector2(117, -1088)
+texture = ExtResource("9_vs67v")
+
+[node name="5Backgroundnew" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_pp740")
+position = Vector2(117, -1512)
+texture = ExtResource("6_f2fjy")
+
+[node name="6Other" type="Sprite2D" parent="."]
+position = Vector2(-623, -1131)
+texture = ExtResource("9_pp740")
+
+[node name="6Grass" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_h1qps")
+position = Vector2(-706, -1030)
+texture = ExtResource("10_gxtnq")
+
+[node name="6Tree" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vk8jv")
+position = Vector2(129, -1173)
+texture = ExtResource("12_ggyl6")
+
+[node name="9Clouds" type="Sprite2D" parent="."]
+position = Vector2(116, -1089)
+texture = ExtResource("10_xvat7")
+
+[node name="10Lighting(setToAdd)" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_ci03i")
+position = Vector2(117, -1088)
+texture = ExtResource("11_dlmju")
+
+[node name="Platform" type="Sprite2D" parent="."]
+position = Vector2(-630, -1156)
+texture = ExtResource("15_ula2a")
+
+[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
+position = Vector2(1688, -1288)
+
+[node name="Camera2D" type="Camera2D" parent="gasser"]
+position = Vector2(328.90253, -769.23254)
+scale = Vector2(-7585.707, -2028.7229)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 7660
+limit_bottom = 3000
+
+[node name="Water" type="Sprite2D" parent="."]
+position = Vector2(-1181, -1111)
+texture = ExtResource("17_gxtnq")
+
+[node name="7CoverForWater" type="Sprite2D" parent="."]
+position = Vector2(-1566, -1210)
+texture = ExtResource("17_ggyl6")
+
+[node name="7FrontChGrass" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ula2a")
+position = Vector2(33, -1101)
+texture = ExtResource("30_ggyl6")
+
+[node name="7Black" type="Sprite2D" parent="."]
+position = Vector2(118, -1511)
+texture = ExtResource("20_vk8jv")
+
+[node name="star" parent="." instance=ExtResource("10_ysndr")]
+material = SubResource("CanvasItemMaterial_h1qps")
+position = Vector2(1846, -939)
+
+[node name="star2" parent="." instance=ExtResource("10_ysndr")]
+position = Vector2(-3466, -851)
+
+[node name="star3" parent="." instance=ExtResource("10_ysndr")]
+position = Vector2(-3096, -2088)
+
+[node name="sfx_water" parent="." instance=ExtResource("16_f2fjy")]
+position = Vector2(-901, -1312)
+
+[node name="death_zone" parent="." instance=ExtResource("17_death")]
+position = Vector2(-2300, -29)
+
+[node name="Area2D" parent="." instance=ExtResource("18_23i61")]
+position = Vector2(846, -680)
+scale = Vector2(30.718458, 45.454254)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
+position = Vector2(-48.92824, -1.2100058)
+scale = Vector2(0.040946554, 0.029690119)
+texture = ExtResource("15_ws52y")
+
+[node name="gasser2" parent="." instance=ExtResource("13_w2lsn")]
+visible = false
+position = Vector2(1628.9999, -1274)
+
+[node name="portal" parent="." instance=ExtResource("17_fmdnp")]
+position = Vector2(-1776, -338.99997)
+scale = Vector2(0.48000088, 0.40000182)
+
+[node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
+position = Vector2(-2489, -381)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3723.0
+offset_top = 3013.0
+offset_right = 3763.0
+offset_bottom = 3053.0
+
+[node name="DialogueSystem" parent="CanvasLayer/Control" instance=ExtResource("19_dialoguebox")]
+layout_mode = 1
+offset_left = -3.0
+offset_top = 404.0
+offset_right = 1113.0
+offset_bottom = 604.0
+
+[node name="DialogueStarter" parent="." instance=ExtResource("20_dialoguestarter")]
+position = Vector2(1789, -1521)
+conversation_file = "res://conversations/gasser script 1.txt"
+
+[node name="DialogueStarter2" parent="." instance=ExtResource("20_dialoguestarter")]
+position = Vector2(261, -1517)
+conversation_file = "res://conversations/gasser script 2.txt"
+
+[node name="DialogueStarter3" parent="." instance=ExtResource("20_dialoguestarter")]
+position = Vector2(-580, -1269)
+conversation_file = "res://conversations/gasser script 3.txt"
+
+[node name="DialogueStarter4" parent="." instance=ExtResource("20_dialoguestarter")]
+position = Vector2(2111, -327)
+conversation_file = "res://conversations/gasser script 4.txt"
+
+[node name="Ambience_sfx" parent="." instance=ExtResource("23_ci03i")]
+
+[node name="ost1" parent="." instance=ExtResource("24_ejmul")]
+max_distance = 4096.0
+
+[node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
+visible = false
+position = Vector2(120, -1089)

@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvd51qbhnauks"]
+
+[ext_resource type="Texture2D" uid="uid://0ohc44s25x8v" path="res://character assets/Snake_spritesheet.png" id="1_i8va4"]
+[ext_resource type="Script" uid="uid://jqe8vudksw6f" path="res://scripts/maingame.gd" id="1_jxvlb"]
+[ext_resource type="Texture2D" uid="uid://dnrkg5b71idlr" path="res://character assets/grass.png" id="2_hiawh"]
+[ext_resource type="Texture2D" uid="uid://t30xg57cm3c3" path="res://character assets/mini.png" id="4_nx2sv"]
+[ext_resource type="PackedScene" uid="uid://cgv88wkivjsbc" path="res://scenes/score.tscn" id="5_60i0e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxvlb"]
+texture = ExtResource("1_i8va4")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hiawh"]
+texture = ExtResource("4_nx2sv")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_k15ac"]
+tile_size = Vector2i(40, 40)
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_jxvlb")
+sources/1 = SubResource("TileSetAtlasSource_hiawh")
+
+[node name="Maingame" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_jxvlb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 3000.0
+offset_bottom = 3000.0
+color = Color(0, 0, 0, 0.5568628)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 800.0
+offset_bottom = 800.0
+texture = ExtResource("2_hiawh")
+stretch_mode = 1
+
+[node name="snake apple" type="TileMapLayer" parent="."]
+use_parent_material = true
+tile_map_data = PackedByteArray(0, 0, 13, 0, 10, 0, 2, 0, 3, 0, 0, 0, 0, 0, 251, 255, 251, 255, 0, 0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_k15ac")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="score" parent="." instance=ExtResource("5_60i0e")]
+position = Vector2(-1, -4)
+
+[node name="winpopup" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="winpopup"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -85.0
+offset_right = 150.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="winpopup/Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 42.0
+offset_right = 254.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 40
+text = "YOU WIN!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="winpopup/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 71.0
+grow_vertical = 0
+text = "RETURN"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="winpopup/Panel/Button" to="." method="_on_button_pressed"]

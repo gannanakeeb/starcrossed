@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfoxmeim4j3np"]
+
+[ext_resource type="AudioStream" uid="uid://bd4wym5s00u50" path="res://sfx/OST/children of stars.ogg" id="1_eyq24"]
+[ext_resource type="Script" uid="uid://6n3l82n141yc" path="res://scripts/ost_1.gd" id="2_d5gx5"]
+
+[node name="ost1" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_eyq24")
+script = ExtResource("2_d5gx5")

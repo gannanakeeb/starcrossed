@@ -14,7 +14,7 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
 		return  
-		
+
 	if body.stars_collected >= required_stars:
 		my_sprite.visible = true
 		reveal_asset()

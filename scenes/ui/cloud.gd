@@ -141,7 +141,6 @@ func load_conversation_from_file(file_path: String) -> Array[DialogueSystem.Dial
 
 			conversation.append(DialogueSystem.DialogueEntry.new(character_name, dialogue_text, target))
 			line_index += 1
-
 	file.close()
 	return conversation
 	

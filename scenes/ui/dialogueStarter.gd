@@ -92,14 +92,9 @@ func _on_body_entered(body):
 		return
 
 	is_done = true
-
 	if conversation_file != "" and dialogue_system:
 		var conversation = load_conversation_from_file(conversation_file)
 		dialogue_system.start(conversation)
-		
-
-		  
-	  
 
 func load_conversation_from_file(file_path: String) -> Array[DialogueSystem.DialogueEntry]:
 	var conversation: Array[DialogueSystem.DialogueEntry] = []

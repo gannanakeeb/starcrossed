@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=35 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://bgh70hg4coo0u" path="res://character assets/1 sky.png" id="1_3mrvk"]
 [ext_resource type="Texture2D" uid="uid://o8f24xgsl5b0" path="res://Children Map/Map Children Final/2 house bg.png" id="2_hqns4"]
@@ -27,6 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://3feq8iva6l1i" path="res://scenes/ui/dialoguebox.tscn" id="22_lrpxc"]
 [ext_resource type="PackedScene" uid="uid://cnfdm5fkro2xr" path="res://scenes/ui/dialogueStarter.tscn" id="23_dnhyy"]
 [ext_resource type="Script" uid="uid://bhs118lhihtp4" path="res://scenes/ui/cloud.gd" id="26_mq6gd"]
+[ext_resource type="VideoStream" uid="uid://crl1uaff6vlvj" path="res://character assets/ENDING.ogv" id="28_lq3jv"]
+[ext_resource type="PackedScene" uid="uid://bc1smesj7a4oe" path="res://scenes/ending.tscn" id="28_nx31k"]
+[ext_resource type="PackedScene" uid="uid://bl5mx7lgrwwa1" path="res://worllddsss_ennnddd.tscn" id="29_lq3jv"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
 
@@ -269,5 +272,29 @@ layout_mode = 1
 position = Vector2(564, 263)
 scale = Vector2(0.4840495, -2.1655502)
 
+[node name="ENDING" parent="." instance=ExtResource("28_nx31k")]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ENDING"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -610.0
+offset_top = -848.0
+offset_right = 610.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("28_lq3jv")
+expand = true
+
+[node name="worllddsss ennnddd" parent="." node_paths=PackedStringArray("video_player", "coming_soon_screen") instance=ExtResource("29_lq3jv")]
+position = Vector2(3962, 796)
+video_player = NodePath("../ENDING/VideoStreamPlayer")
+coming_soon_screen = NodePath("../ENDING/ColorRect")
+
 [connection signal="body_entered" from="riddle area" to="fares" method="_on_riddle_area_body_entered"]
 [connection signal="body_entered" from="DialogueStarter3" to="DialogueStarter3" method="_on_body_entered"]
+
+[editable path="ENDING"]

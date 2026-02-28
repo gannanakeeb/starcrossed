@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl5mx7lgrwwa1"]
+
+[ext_resource type="Script" uid="uid://cgsh6hn0o70sq" path="res://worllddsss_ennnddd.gd" id="1_7f37n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u63l"]
+size = Vector2(12, 418)
+
+[node name="worllddsss ennnddd" type="Area2D"]
+script = ExtResource("1_7f37n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -142)
+shape = SubResource("RectangleShape2D_6u63l")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds01ris6abqt5"]
+
+[ext_resource type="Texture2D" uid="uid://elian6il7ihf" path="res://gassermap/Map Gaser Final/Platforms/boat.png" id="1_annr2"]
+
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0063d"]
+radius = 16.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, -3)
+texture = ExtResource("1_annr2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-907, -107)
+rotation = 1.1842282
+build_mode = 1
+polygon = PackedVector2Array(-1.1726685, -20.991089, -3.74646, -25.277771, -1.484375, -30.835022, 1.6712646, -30.630188, 2.9418335, -25.794312, 4.7615967, -19.655212, 24.597961, 16.4906, 25.565796, 40.637268, 20.22232, 64.37433, 2.7728882, 93.98035, -10.464142, 102.62799, -25.89798, 106.06268, -43.700745, 102.055115, -56.46283, 93.62128, -62.741455, 87.8266, -49.397522, 92.17853, -36.602783, 95.227295, -30.08667, 92.48132, -22.98877, 85.65344, -18.29245, 76.76837, -12.637268, 62.875244, -8.596985, 39.687378, -2.2946777, 10.942322, -1.442749, -7.0653076)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-957, -81)
+shape = SubResource("CircleShape2D_0063d")

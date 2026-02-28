@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://c7nsp05yn07vs"
+path="res://.godot/imported/nader jump jump .png-5f1c63239ce3e6c569c45fed9b002948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://character assets/nader jump jump .png"
+dest_files=["res://.godot/imported/nader jump jump .png-5f1c63239ce3e6c569c45fed9b002948.ctex"]
 
 [params]
 

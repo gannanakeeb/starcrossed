@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://dmkrw41fegips"
+path="res://.godot/imported/roaya jump.png-4be1a29f23a20f88582e5409339adbc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://character assets/roaya jump.png"
+dest_files=["res://.godot/imported/roaya jump.png-4be1a29f23a20f88582e5409339adbc3.ctex"]
 
 [params]
 

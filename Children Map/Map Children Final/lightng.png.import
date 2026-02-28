@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://bwrscq2xi6r4w"
+path="res://.godot/imported/lightng.png-fbd640b76d62760877aadc1ca9073fa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://Children Map/Map Children Final/lightng.png"
+dest_files=["res://.godot/imported/lightng.png-fbd640b76d62760877aadc1ca9073fa3.ctex"]
 
 [params]
 

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dldagwq13nedc" path="res://gassermap/Map Gaser Final/10 lighting (set to add).png" id="11_dlmju"]
 [ext_resource type="Texture2D" uid="uid://cjkp34pyt1lke" path="res://gassermap/Map Gaser Final/tree .png" id="12_ggyl6"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
-[ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
+[ext_resource type="PackedScene" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
 [ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]

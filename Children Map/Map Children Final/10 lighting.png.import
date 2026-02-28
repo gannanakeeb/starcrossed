@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://cmg2gvw0db367"
+path="res://.godot/imported/10 lighting.png-29fda09e43a63543d1aabd60b7d49cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://Children Map/Map Children Final/10 lighting.png"
+dest_files=["res://.godot/imported/10 lighting.png-29fda09e43a63543d1aabd60b7d49cdb.ctex"]
 
 [params]
 

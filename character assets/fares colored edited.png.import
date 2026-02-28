@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://cwprg13e84ugu"
+path="res://.godot/imported/fares colored edited.png-abc33170dd9a7610d2d3f3594419ea70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://character assets/fares colored edited.png"
+dest_files=["res://.godot/imported/fares colored edited.png-abc33170dd9a7610d2d3f3594419ea70.ctex"]
 
 [params]
 

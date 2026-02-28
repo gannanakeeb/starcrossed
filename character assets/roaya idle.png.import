@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyol8ln55y2sw"
-path="res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"
+uid="uid://dert3iet7pdd"
+path="res://.godot/imported/roaya idle.png-da2f06597d584b04a1d7f850c13eeaed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://character assets/stars png.png"
-dest_files=["res://.godot/imported/stars png.png-fbc0d8f6126eadfe7083787e1f43ff5d.ctex"]
+source_file="res://character assets/roaya idle.png"
+dest_files=["res://.godot/imported/roaya idle.png-da2f06597d584b04a1d7f850c13eeaed.ctex"]
 
 [params]
 

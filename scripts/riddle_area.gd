@@ -2,18 +2,19 @@ extends Area2D
 
 
 @export var required_stars := 3
-@onready var my_sprite = $Sprite2D2
-@onready var portal_asset = $"../portal"
+@export var my_sprite: Node2D                                                                                                                                                                                                                  
+@export var portal_asset: Node2D
 
 func _ready():
 	my_sprite.visible = false
-	portal_asset.visible = false
-	portal_asset.process_mode = Node.PROCESS_MODE_DISABLED
+	if(portal_asset):
+		portal_asset.visible = false
+		portal_asset.process_mode = Node.PROCESS_MODE_DISABLED
 	
-func _on_body_entered(body):
+func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
-		return
-
+		return  
+		
 	if body.stars_collected >= required_stars:
 		my_sprite.visible = true
 		reveal_asset()
@@ -21,9 +22,10 @@ func _on_body_entered(body):
 		print("You need more stars")
 		
 func reveal_asset():
-	portal_asset.visible = true
-	# Enable the logic/collision so the player can now touch it
-	portal_asset.process_mode = Node.PROCESS_MODE_INHERIT
+	if(portal_asset):
+		portal_asset.visible = true
+		# Enable the logic/collision so the player can now touch it
+		portal_asset.process_mode = Node.PROCESS_MODE_INHERIT
 	print("A secret portal has appeared!")
 	
 	# IMPORTANT WARNING ABOUT queue_free():

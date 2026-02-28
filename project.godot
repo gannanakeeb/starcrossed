@@ -10,11 +10,25 @@ config_version=5
 
 [application]
 
-config/name="gasser lev 1"
-run/main_scene="uid://cyrjd4os6s63a"
+config/name="Fijna Ya Rab"
+run/main_scene="uid://dqtfagie3q5mr"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
 buses/default_bus_layout="res://sfx/default_bus_layout.tres"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="trying out 13-12-2025"
+
+[gui]
+
+theme/custom_font="uid://b0ugklhmu2kg6"

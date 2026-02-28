@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=44 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -14,8 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="10_ysndr"]
 [ext_resource type="Texture2D" uid="uid://cjkp34pyt1lke" path="res://gassermap/Map Gaser Final/tree .png" id="12_ggyl6"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
-[ext_resource type="Texture2D" uid="uid://siaa0six8rv7" path="res://gassermap/Map Gaser Final/light 1.png" id="14_65w8m"]
-[ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
+[ext_resource type="Texture2D" uid="uid://d2lmghdwdds2w" path="res://gassermap/Map Gaser Final/Light.png" id="14_ula2a"][ext_resource type="PackedScene" uid="uid://57br65oq0gbq" path="res://scenes/collosion for gasser map .tscn" id="15_f2fjy"]
 [ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
@@ -67,6 +66,9 @@ shader = ExtResource("6_m3pij")
 shader_parameter/Windstrength = -20.0
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h1qps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ula2a"]
+size = Vector2(223, 39)
 
 [node name="gassermap" type="Node2D"]
 position = Vector2(3723, 3013)
@@ -174,7 +176,7 @@ position = Vector2(1846, -936.5)
 position = Vector2(-3466, -848.5)
 
 [node name="star3" parent="." instance=ExtResource("10_ysndr")]
-position = Vector2(-3096, -2085.5)
+position = Vector2(-3045, -1960)
 
 [node name="sfx_water" parent="." instance=ExtResource("16_f2fjy")]
 position = Vector2(-901, -1309.5)
@@ -182,9 +184,11 @@ position = Vector2(-901, -1309.5)
 [node name="death_zone" parent="." instance=ExtResource("17_death")]
 position = Vector2(-2300, -26.5)
 
-[node name="Area2D" parent="." instance=ExtResource("18_23i61")]
+[node name="Area2D" parent="." node_paths=PackedStringArray("my_sprite", "portal_asset") instance=ExtResource("18_23i61")]
 position = Vector2(846, -677.5)
 scale = Vector2(30.718458, 45.454254)
+my_sprite = NodePath("Sprite2D2")
+portal_asset = NodePath("../portal")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
 position = Vector2(-48.92824, -1.2100058)
@@ -202,38 +206,25 @@ scale = Vector2(0.48000088, 0.40000182)
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
 position = Vector2(-2489, -378.5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 3723.0
-offset_top = 3013.0
-offset_right = 3763.0
-offset_bottom = 3053.0
-
-[node name="DialogueSystem" parent="CanvasLayer/Control" instance=ExtResource("19_dialoguebox")]
-layout_mode = 1
-offset_left = -3.0
-offset_top = 404.0
-offset_right = 1113.0
-offset_bottom = 604.0
-
-[node name="DialogueStarter" parent="." instance=ExtResource("20_dialoguestarter")]
+[node name="DialogueStarter" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(1789, -1518.5)
 conversation_file = "res://conversations/gasser script 1.txt"
+camera_targets = [null, null]
 
-[node name="DialogueStarter2" parent="." instance=ExtResource("20_dialoguestarter")]
+[node name="DialogueStarter2" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(261, -1514.5)
 conversation_file = "res://conversations/gasser script 2.txt"
+camera_targets = [null]
 
-[node name="DialogueStarter3" parent="." instance=ExtResource("20_dialoguestarter")]
+[node name="DialogueStarter3" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(-580, -1266.5)
 conversation_file = "res://conversations/gasser script 3.txt"
+camera_targets = [null, null]
 
-[node name="DialogueStarter4" parent="." instance=ExtResource("20_dialoguestarter")]
+[node name="DialogueStarter4" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(2111, -324.5)
 conversation_file = "res://conversations/gasser script 4.txt"
+camera_targets = [null]
 
 [node name="Ambience_sfx" parent="." instance=ExtResource("23_ci03i")]
 position = Vector2(0, 2.5)
@@ -244,3 +235,20 @@ max_distance = 4096.0
 
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(120, -1089)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(641.5, 602.5)
+shape = SubResource("RectangleShape2D_ula2a")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="screen" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueSystem" parent="CanvasLayer2/screen" instance=ExtResource("19_dialoguebox")]
+layout_mode = 1

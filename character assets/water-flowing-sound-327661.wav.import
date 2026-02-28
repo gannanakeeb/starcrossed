@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gsf8tu81cm0k"
+path="res://.godot/imported/water-flowing-sound-327661.wav-c70c7fea402583bdda7f5cc2d84f6b85.sample"
+
+[deps]
+
+source_file="res://character assets/water-flowing-sound-327661.wav"
+dest_files=["res://.godot/imported/water-flowing-sound-327661.wav-c70c7fea402583bdda7f5cc2d84f6b85.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

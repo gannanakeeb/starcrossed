@@ -326,7 +326,6 @@ texture_filter = 1
 position = Vector2(27, -19.000015)
 scale = Vector2(0.7961538, 0.79951304)
 sprite_frames = SubResource("SpriteFrames_ggmll")
-animation = &"idle"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -338,3 +337,11 @@ position = Vector2(-349, -62)
 sprite_frames = SubResource("SpriteFrames_plhro")
 frame = 3
 frame_progress = 0.91449064
+
+[node name="child_sfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx_gasser"
+
+[node name="child_sfx_footsteps" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx_gasser"
+
+[connection signal="frame_changed" from="colored walking" to="." method="_on_colored_walking_frame_changed"]

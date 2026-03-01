@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cdn8tmmcn1ic"]
+[gd_scene load_steps=11 format=3 uid="uid://cdn8tmmcn1ic"]
 
 [ext_resource type="Texture2D" uid="uid://g3g2wyep7n3p" path="res://Children Map/Map Children Final/7 foreground.png" id="1_lml0l"]
+[ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="2_oi50o"]
 [ext_resource type="Texture2D" uid="uid://b8c3rq1is57bq" path="res://character assets/7 foreground.png" id="2_wbs7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lml0l"]
@@ -15,11 +16,25 @@ size = Vector2(30, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj1u5"]
 size = Vector2(683, 1656)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_136kf"]
+size = Vector2(167, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bqxj"]
+size = Vector2(559, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67yyt"]
+size = Vector2(168, 12)
+
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("1_lml0l")
+
+[node name="Platform" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-748, -71)
+texture = ExtResource("2_oi50o")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
@@ -129,3 +144,15 @@ shape = SubResource("RectangleShape2D_oj1u5")
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-3321, 586, -3300, 565, -2836, 565, -2832, 570, -2852, 586, -2867, 615, -2891, 619, -2934, 641, -3088, 703, -3123, 695, -3177, 683, -3203, 662, -3222, 645, -3240, 619, -3288, 607, -3308, 598)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-2432, -688)
+shape = SubResource("RectangleShape2D_136kf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(742.5, -656)
+shape = SubResource("RectangleShape2D_3bqxj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(227, -779)
+shape = SubResource("RectangleShape2D_67yyt")

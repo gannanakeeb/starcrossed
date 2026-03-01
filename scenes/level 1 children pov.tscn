@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://dqtfagie3q5mr"]
+[gd_scene load_steps=42 format=3 uid="uid://dqtfagie3q5mr"]
 
 [ext_resource type="Texture2D" uid="uid://ek7od6biqlpc" path="res://Children Map/Map Children Final/2 house bg.png" id="2_nx31k"]
+[ext_resource type="Shader" uid="uid://dmv4vsll503kt" path="res://tree shaders(L_R).tres" id="3_lhl6k"]
 [ext_resource type="Texture2D" uid="uid://bwob31yjnnnac" path="res://character assets/3 depth.png" id="3_nx31k"]
 [ext_resource type="Texture2D" uid="uid://dvwqr1lfcq3xf" path="res://Children Map/Map Children Final/multiply yarab.png" id="4_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://lhw1bge4duu5" path="res://Children Map/Map Children Final/4 house middle g.png" id="5_lq3jv"]
@@ -29,17 +30,34 @@
 [ext_resource type="VideoStream" uid="uid://crl1uaff6vlvj" path="res://character assets/ENDING.ogv" id="28_lq3jv"]
 [ext_resource type="PackedScene" uid="uid://bc1smesj7a4oe" path="res://scenes/ending.tscn" id="28_nx31k"]
 [ext_resource type="PackedScene" uid="uid://bl5mx7lgrwwa1" path="res://worllddsss_ennnddd.tscn" id="29_lq3jv"]
+[ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="30_kinm6"]
+[ext_resource type="PackedScene" uid="uid://cn26xuk640dn8" path="res://scenes/respawn_point.tscn" id="31_i10e2"]
+[ext_resource type="PackedScene" uid="uid://cfoxmeim4j3np" path="res://scenes/ost_1.tscn" id="32_0rsgn"]
+[ext_resource type="PackedScene" uid="uid://186mad87pccb" path="res://scenes/Ambience_sfx.tscn" id="33_lhl6k"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nr8wp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pp072"]
+shader = ExtResource("3_lhl6k")
+shader_parameter/Windstrength = 11.494001495965001
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d2bti"]
 light_mode = 1
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5y0w6"]
+shader = ExtResource("3_lhl6k")
+shader_parameter/Windstrength = -20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0yrh1"]
+shader = ExtResource("3_lhl6k")
+shader_parameter/Windstrength = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwutp"]
+shader = ExtResource("3_lhl6k")
+shader_parameter/Windstrength = 12.053001522517498
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ta5nu"]
 blend_mode = 1
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcxrq"]
-size = Vector2(7763.5, 466)
 
 [node name="enviroment" type="Node2D"]
 position = Vector2(1, 0)
@@ -55,6 +73,7 @@ texture = ExtResource("21_b8m0v")
 texture = ExtResource("2_nx31k")
 
 [node name="3" type="Sprite2D" parent="1/2"]
+material = SubResource("ShaderMaterial_pp072")
 texture = ExtResource("3_nx31k")
 
 [node name="3_5" type="Sprite2D" parent="1/2"]
@@ -67,9 +86,11 @@ position = Vector2(0, 429)
 texture = ExtResource("5_lq3jv")
 
 [node name="5" type="Sprite2D" parent="1"]
+material = SubResource("ShaderMaterial_5y0w6")
 texture = ExtResource("6_lq3jv")
 
 [node name="6" type="Sprite2D" parent="1"]
+material = SubResource("ShaderMaterial_0yrh1")
 position = Vector2(-34, 413)
 texture = ExtResource("7_nx31k")
 
@@ -82,6 +103,7 @@ position = Vector2(-346, 394)
 [node name="8" type="Sprite2D" parent="1"]
 
 [node name="GameClouds" type="Sprite2D" parent="1/8"]
+material = SubResource("ShaderMaterial_gwutp")
 texture = ExtResource("12_d0558")
 script = ExtResource("13_wce0o")
 
@@ -108,14 +130,6 @@ collision_mask = 7
 position = Vector2(2656, -95)
 polygon = PackedVector2Array(455, -658, 471, -662, 1015, -663, 1025, -659, 1016, -651, 988, -634, 980, -630, 970, -617, 958, -617, 942, -592, 928, -567, 893, -582, 879, -586, 855, -584, 843, -584, 812, -604, 792, -602, 779, -607, 698, -608, 666, -623, 619, -598, 535, -601, 493, -627, 486, -645, 469, -655)
 one_way_collision = true
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="platform 1"]
-position = Vector2(2693, -1795)
-shape = SubResource("RectangleShape2D_qcxrq")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="platform 1"]
-position = Vector2(2687, 1243)
-shape = SubResource("RectangleShape2D_qcxrq")
 
 [node name="fares" parent="." groups=["player"] instance=ExtResource("15_v42f7")]
 position = Vector2(1571, -453)
@@ -203,6 +217,7 @@ offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
+metadata/_edit_use_anchors_ = true
 
 [node name="RiddleUI" parent="UI/riddle" instance=ExtResource("13_llmri")]
 light_mask = 2
@@ -212,6 +227,7 @@ offset_top = 0.0
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true
 
 [node name="stars marker" type="Node2D" parent="."]
 position = Vector2(-1726, -645)
@@ -259,9 +275,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="DialogueSystem" parent="CanvasLayer2/screen" instance=ExtResource("22_lrpxc")]
 layout_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(564, 263)
@@ -283,11 +301,23 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("28_lq3jv")
 expand = true
+metadata/_edit_use_anchors_ = true
 
 [node name="worllddsss ennnddd" parent="." node_paths=PackedStringArray("video_player", "coming_soon_screen") instance=ExtResource("29_lq3jv")]
 position = Vector2(3962, 796)
 video_player = NodePath("../ENDING/VideoStreamPlayer")
 coming_soon_screen = NodePath("../ENDING/ColorRect")
+
+[node name="death_zone" parent="." instance=ExtResource("30_kinm6")]
+position = Vector2(-2294, 1033)
+
+[node name="respawn_point" parent="." instance=ExtResource("31_i10e2")]
+position = Vector2(-2473, 751)
+
+[node name="ost1" parent="." instance=ExtResource("32_0rsgn")]
+max_distance = 4096.0
+
+[node name="Ambience_sfx" parent="." instance=ExtResource("33_lhl6k")]
 
 [connection signal="body_entered" from="riddle area" to="fares" method="_on_riddle_area_body_entered"]
 [connection signal="body_entered" from="DialogueStarter3" to="DialogueStarter3" method="_on_body_entered"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8qgdn0ioyxs3"
+path="res://.godot/imported/foot  (8).wav-06e3d98bc6384364b8d63f9e2ec1d279.sample"
+
+[deps]
+
+source_file="res://sfx/foot steps sfx/foot  (8).wav"
+dest_files=["res://.godot/imported/foot  (8).wav-06e3d98bc6384364b8d63f9e2ec1d279.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

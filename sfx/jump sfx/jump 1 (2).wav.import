@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cdtyxcoyd862g"
-path="res://.godot/imported/foot 6.wav-199c9ca19af2c1cf2147e666c664fc05.sample"
+uid="uid://ot8u1awb2b6c"
+path="res://.godot/imported/jump 1 (2).wav-6ba56480edab3089bc9410468975594b.sample"
 
 [deps]
 
-source_file="res://sfx/foot steps sfx/foot 6.wav"
-dest_files=["res://.godot/imported/foot 6.wav-199c9ca19af2c1cf2147e666c664fc05.sample"]
+source_file="res://sfx/jump sfx/jump 1 (2).wav"
+dest_files=["res://.godot/imported/jump 1 (2).wav-6ba56480edab3089bc9410468975594b.sample"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=45 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
+[ext_resource type="Script" uid="uid://dgyq7ke28rbyp" path="res://scripts/death zone screen.gd" id="17_65w8m"]
 [ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="17_death"]
 [ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
 [ext_resource type="Texture2D" uid="uid://cmejuutmsux5q" path="res://gassermap/Map Gaser Final/cover for water .png" id="17_ggyl6"]
@@ -42,11 +43,11 @@ shader_parameter/Windstrength = -4.9999992875
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pp740"]
 shader = ExtResource("6_m3pij")
-shader_parameter/Windstrength = -6.9999993825
+shader_parameter/Windstrength = -20.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h1qps"]
 shader = ExtResource("6_m3pij")
-shader_parameter/Windstrength = 5.0000011875000006
+shader_parameter/Windstrength = 10.5170014495575
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vk8jv"]
 shader = ExtResource("6_m3pij")
@@ -69,7 +70,7 @@ shader_parameter/Windstrength = -20.0
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h1qps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ula2a"]
-size = Vector2(223, 39)
+size = Vector2(223, 12)
 
 [node name="gassermap" type="Node2D"]
 position = Vector2(3723, 3013)
@@ -135,16 +136,34 @@ position = Vector2(-630, -1153.5)
 texture = ExtResource("15_ula2a")
 
 [node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
-position = Vector2(1732, -1295)
+position = Vector2(1724, -1302)
 
-[node name="Camera2D" type="Camera2D" parent="gasser"]
-position = Vector2(328.90253, -769.23254)
-scale = Vector2(-7585.707, -2028.7229)
-zoom = Vector2(0.8, 0.8)
+[node name="gasser_camera" type="Camera2D" parent="gasser"]
+position = Vector2(327.1247, -617.3091)
+rotation = -3.1415925
+scale = Vector2(7585.707, 2028.7229)
 limit_left = 0
 limit_top = 0
 limit_right = 7660
 limit_bottom = 3000
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.3
+drag_bottom_margin = 0.3
+
+[node name="CanvasLayer_respawen" type="CanvasLayer" parent="." groups=["fade"]]
+script = ExtResource("17_65w8m")
+
+[node name="fade_rect" type="ColorRect" parent="CanvasLayer_respawen"]
+anchors_preset = -1
+anchor_right = 6.032031
+anchor_bottom = 4.288889
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15686275, 0.16470589, 0.23137255, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="Light2" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_vk8jv")
@@ -196,16 +215,12 @@ position = Vector2(-48.92824, -1.2100058)
 scale = Vector2(0.040946554, 0.029690119)
 texture = ExtResource("15_ws52y")
 
-[node name="gasser2" parent="." instance=ExtResource("13_w2lsn")]
-visible = false
-position = Vector2(1628.9999, -1274)
-
 [node name="portal" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -336.49997)
 scale = Vector2(0.48000088, 0.40000182)
 
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
-position = Vector2(-2489, -378.5)
+position = Vector2(503, -1389)
 
 [node name="DialogueStarter" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(1789, -1518.5)
@@ -237,8 +252,8 @@ max_distance = 4096.0
 [node name="StaticBody2D" parent="." instance=ExtResource("15_f2fjy")]
 position = Vector2(120, -1089)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(641.5, 602.5)
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(641.5, 589)
 shape = SubResource("RectangleShape2D_ula2a")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]

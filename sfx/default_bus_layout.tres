@@ -1,16 +1,26 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://dllkocb7bxycc"]
+[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://dllkocb7bxycc"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_b7v47"]
 resource_name = "Reverb"
 room_size = 0.2
-wet = 0.1
+wet = 0.2
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_3qpui"]
+resource_name = "Reverb"
+room_size = 0.2
+wet = 0.2
+
+[sub_resource type="AudioEffectStereoEnhance" id="AudioEffectStereoEnhance_3qpui"]
+resource_name = "StereoEnhance"
+time_pullout_ms = 1.83
+surround = 0.2
 
 [resource]
 bus/1/name = &"sfx_gasser"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = 0.0
+bus/1/volume_db = -0.13049698
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectReverb_b7v47")
 bus/1/effect/0/enabled = true
@@ -32,3 +42,7 @@ bus/4/mute = false
 bus/4/bypass_fx = false
 bus/4/volume_db = 0.0
 bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectReverb_3qpui")
+bus/4/effect/0/enabled = true
+bus/4/effect/1/effect = SubResource("AudioEffectStereoEnhance_3qpui")
+bus/4/effect/1/enabled = true

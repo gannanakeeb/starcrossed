@@ -263,8 +263,8 @@ frame_progress = 0.9517445
 position = Vector2(13.000001, -3.0000002)
 scale = Vector2(0.8108766, 0.839669)
 sprite_frames = SubResource("SpriteFrames_md187")
-animation = &"idle"
 autoplay = "default"
+frame_progress = 0.62887293
 
 [node name="colored walking" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -273,3 +273,11 @@ frame_progress = 0.0374878
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_dpspy")
+
+[node name="child_sfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx_gasser"
+
+[node name="child_sfx_footsteps" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx_gasser"
+
+[connection signal="frame_changed" from="colored running" to="." method="_on_colored_running_frame_changed"]

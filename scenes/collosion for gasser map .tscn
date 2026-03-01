@@ -156,3 +156,10 @@ shape = SubResource("RectangleShape2D_3bqxj")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 position = Vector2(227, -779)
 shape = SubResource("RectangleShape2D_67yyt")
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-295, -140, 21, -363, 59, -365, 58, -247, -231, -67, -295, -88)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
+position = Vector2(-36, 1)
+polygon = PackedVector2Array(-2385, -367, -2344, -369, -2334, -370, -2191, -281, -2316, -277)

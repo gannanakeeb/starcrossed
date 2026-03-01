@@ -2,7 +2,8 @@ extends Area2D
 
 # 1. Define where your mini-game scene file is located
 # CHANGE THIS PATH to match your actual mini-game file location!
-var snake_scene = preload("res://scenes/maingame.tscn") 
+var snake_scene = preload("res://scenes/maingame.tscn")
+@export var player: CharacterBody2D
 
 func _on_body_entered(body):
 	# 2. Security Check: Make sure it's actually the Player touching it
@@ -30,8 +31,16 @@ func load_minigame(player_pos):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	visible = false  # متخفي في البداية
+	# Player في نفس الأب
+	
+	if player != null:
+		player.connect("collected_three_stars", Callable(self, "_on_three_stars_collected"))
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
 	
+func _on_three_stars_collected():
+	visible = true
+	print("RiddleCode shown!")

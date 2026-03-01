@@ -1,5 +1,7 @@
 extends CharacterBody2D  # السكريبت مربوط على لاعب من نوع CharacterBody2D
 
+signal collected_three_stars
+
 @export var speed: float = 400.0  # سرعة الحركة الأفقية
 @export var jump_velocity: float = -800.0  # قوة القفز (سالب لأن الاتجاه للأعلى)
 @export var gravity: float = 980.0  # قوة الجاذبية

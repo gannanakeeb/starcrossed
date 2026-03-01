@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://cvd51qbhnauks"]
 
-[ext_resource type="Texture2D" uid="uid://0ohc44s25x8v" path="res://character assets/Snake_spritesheet.png" id="1_i8va4"]
+[ext_resource type="Texture2D" uid="uid://cdqyjiubfo5t" path="res://character assets/Snake_spritesheet.png" id="1_i8va4"]
 [ext_resource type="Script" uid="uid://jqe8vudksw6f" path="res://scripts/maingame.gd" id="1_jxvlb"]
-[ext_resource type="Texture2D" uid="uid://dnrkg5b71idlr" path="res://character assets/grass.png" id="2_hiawh"]
-[ext_resource type="Texture2D" uid="uid://t30xg57cm3c3" path="res://character assets/mini.png" id="4_nx2sv"]
+[ext_resource type="Texture2D" uid="uid://bfplsqfnvs7kp" path="res://character assets/grass.png" id="2_hiawh"]
+[ext_resource type="Texture2D" uid="uid://bgx828n2vmhb1" path="res://character assets/mini.png" id="4_nx2sv"]
 [ext_resource type="PackedScene" uid="uid://cgv88wkivjsbc" path="res://scenes/score.tscn" id="5_60i0e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jxvlb"]
@@ -38,6 +38,7 @@ sources/1 = SubResource("TileSetAtlasSource_hiawh")
 
 [node name="Maingame" type="Node2D"]
 process_mode = 3
+z_index = 3
 script = ExtResource("1_jxvlb")
 
 [node name="ColorRect" type="ColorRect" parent="."]

@@ -4,12 +4,17 @@ extends Area2D
 @export var required_stars := 3
 @export var my_sprite: Node2D                                                                                                                                                                                                                  
 @export var portal_asset: Node2D
+@export var player: CharacterBody2D
 
 func _ready():
 	my_sprite.visible = false
 	if(portal_asset):
 		portal_asset.visible = false
 		portal_asset.process_mode = Node.PROCESS_MODE_DISABLED
+		
+	# Player في نفس الأب
+	if player != null:
+		player.connect("collected_three_stars", Callable(self, "_on_three_stars_collected"))	
 	
 func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("player"):
@@ -34,3 +39,7 @@ func reveal_asset():
 	# If you want the sprite to stay visible on screen, we should disable the collision 
 	# instead of deleting the whole node.
 	$CollisionShape2D.set_deferred("disabled", true)
+
+func _on_three_stars_collected():
+	my_sprite.visible = true
+	print("RiddleCode shown!")

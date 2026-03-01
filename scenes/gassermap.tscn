@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=47 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -181,7 +181,7 @@ material = SubResource("CanvasItemMaterial_h1qps")
 position = Vector2(1846, -936.5)
 
 [node name="star2" parent="." instance=ExtResource("10_ysndr")]
-position = Vector2(-3466, -848.5)
+position = Vector2(-3288, -740)
 
 [node name="star3" parent="." instance=ExtResource("10_ysndr")]
 position = Vector2(-3045, -1960)
@@ -192,11 +192,12 @@ position = Vector2(-901, -1309.5)
 [node name="death_zone" parent="." instance=ExtResource("17_death")]
 position = Vector2(-2300, -26.5)
 
-[node name="Area2D" parent="." node_paths=PackedStringArray("my_sprite", "portal_asset") instance=ExtResource("18_23i61")]
+[node name="Area2D" parent="." node_paths=PackedStringArray("my_sprite", "portal_asset", "player") instance=ExtResource("18_23i61")]
 position = Vector2(846, -677.5)
 scale = Vector2(30.718458, 45.454254)
 my_sprite = NodePath("Sprite2D2")
 portal_asset = NodePath("../portal")
+player = NodePath("../gasser")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Area2D"]
 position = Vector2(-48.92824, -1.2100058)
@@ -210,9 +211,10 @@ position = Vector2(19.080708, -6.298432)
 visible = false
 position = Vector2(1628.9999, -1274)
 
-[node name="portal" parent="." instance=ExtResource("17_fmdnp")]
+[node name="portal" parent="." node_paths=PackedStringArray("player") instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -336.49997)
 scale = Vector2(0.48000088, 0.40000182)
+player = NodePath("../gasser")
 
 [node name="Nodephone node2D" type="Node2D" parent="portal"]
 

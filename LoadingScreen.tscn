@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqa2uuv2js8rq"]
+
+[ext_resource type="Script" path="res://Assets/loading_screen.gd" id="1_dhqi2"]
+[ext_resource type="VideoStream" uid="uid://dhk17kxc1honl" path="res://Assets/videos/louding.ogv" id="1_ghsbh"]
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dhqi2")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_ghsbh")
+autoplay = true
+expand = true

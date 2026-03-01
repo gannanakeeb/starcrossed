@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmuoc0gv04s73"]
+
+[ext_resource type="AudioStream" path="res://Assets/videos/children of stars main theme 01.wav.tres" id="1_y4juv"]
+[ext_resource type="Script" path="res://audio_stream_player.gd" id="2_y4juv"]
+
+[node name="Node" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_y4juv")
+autoplay = true
+script = ExtResource("2_y4juv")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_y4juv")
+autoplay = true
+script = ExtResource("2_y4juv")

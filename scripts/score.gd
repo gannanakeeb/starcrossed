@@ -33,4 +33,8 @@ func trigger_win():
 	emit_signal("minigame_won")
 	get_tree().paused = true 
 	win_popup.visible = true
-	
+	# Find the Scroll and make it appear
+	var scroll = %scroll
+	if scroll:
+		print("Scroll found! Activating...")
+		scroll.activate_scroll() # This triggers the visible + physics unlock

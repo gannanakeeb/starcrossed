@@ -1,7 +1,5 @@
 extends CanvasLayer
-
-func _on_back_button_pressed():
-	# Hide the hint
+func _on_back_hint_button_pressed() -> void:
 	self.visible = false
 	
 	# Put the mouse back to game mode (if your game is first-person/locked)
@@ -9,3 +7,4 @@ func _on_back_button_pressed():
 	
 	# Resume any game logic if you paused it
 	get_tree().paused = false
+	

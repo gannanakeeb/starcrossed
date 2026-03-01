@@ -4,30 +4,34 @@
 [ext_resource type="Texture2D" uid="uid://drajuxvhogt6s" path="res://gassermap/Map Gaser Final/phone.png" id="2_grpcu"]
 
 [node name="hint" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_lsscw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -848.0
-offset_top = -1264.0
-offset_right = 848.0
-offset_bottom = 1264.0
+offset_left = -215.0
+offset_top = -240.0
+offset_right = 1481.0
+offset_bottom = 2288.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.19939832)
 texture = ExtResource("2_grpcu")
 
-[node name="back button" type="Button" parent="TextureRect"]
+[node name="back hint button" type="Button" parent="TextureRect"]
+process_mode = 3
 layout_mode = 1
 offset_left = 1690.0
 offset_top = 2342.0457
 offset_right = 1837.0
 offset_bottom = 2435.0457
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 200
 text = "back"
 
-[connection signal="pressed" from="TextureRect/back button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TextureRect/back hint button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="TextureRect/back hint button" to="." method="_on_back_hint_button_pressed"]

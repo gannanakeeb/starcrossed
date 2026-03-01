@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=54 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -40,6 +40,7 @@
 [ext_resource type="Shader" uid="uid://c7nd23kkv6gos" path="res://scenes/level 1 children pov.gdshader" id="38_eqfnh"]
 [ext_resource type="VideoStream" uid="uid://crl1uaff6vlvj" path="res://character assets/ENDING.ogv" id="39_7rfj8"]
 [ext_resource type="PackedScene" uid="uid://bl5mx7lgrwwa1" path="res://worllddsss_ennnddd.tscn" id="40_e72fr"]
+[ext_resource type="PackedScene" uid="uid://caohdfwwdlkd3" path="res://scenes/scroll.tscn" id="41_eqfnh"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
 blend_mode = 3
@@ -325,10 +326,6 @@ video_player = NodePath("../ENDING gasser/ending gasser")
 coming_soon_screen = NodePath("../ENDING gasser/Label")
 black_backdrop = NodePath("../ENDING gasser/ColorRect")
 
-[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
-[connection signal="body_entered" from="worllddsss ennn gasserddd" to="gasser" method="_on_worllddsss_ennn_gasserddd_body_entered"]
-
-[editable path="ENDING gasser"]
 [node name="GameClouds" type="Sprite2D" parent="."]
 position = Vector2(114, -1521)
 texture = ExtResource("33_vk8jv")
@@ -338,3 +335,13 @@ script = ExtResource("34_65w8m")
 position = Vector2(1322, 92)
 conversation_file = "res://conversations/var script .txt"
 camera_targets = [NodePath("../Area2D/Sprite2D2/code node"), NodePath("../portal/Nodephone node2D"), null]
+
+[node name="scroll" parent="." instance=ExtResource("41_eqfnh")]
+unique_name_in_owner = true
+position = Vector2(-1221, -456)
+scale = Vector2(0.7600049, 0.68)
+
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_entered" from="worllddsss ennn gasserddd" to="gasser" method="_on_worllddsss_ennn_gasserddd_body_entered"]
+
+[editable path="ENDING gasser"]

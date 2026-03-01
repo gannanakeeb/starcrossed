@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=52 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -34,6 +34,11 @@
 [ext_resource type="Texture2D" uid="uid://okjm46vojrun" path="res://gassermap/Map Gaser Final/front ch grass.png" id="30_ggyl6"]
 [ext_resource type="Texture2D" uid="uid://cmm3axndvis45" path="res://character assets/game clouds.png" id="33_vk8jv"]
 [ext_resource type="Script" uid="uid://kqc17xtobeh7" path="res://scripts/game_clouds.gd" id="34_65w8m"]
+[ext_resource type="PackedScene" uid="uid://036u4yh5mm4t" path="res://scenes/hint.tscn" id="36_yyrpy"]
+[ext_resource type="PackedScene" uid="uid://bc1smesj7a4oe" path="res://scenes/ending.tscn" id="37_ww5xr"]
+[ext_resource type="Shader" uid="uid://c7nd23kkv6gos" path="res://scenes/level 1 children pov.gdshader" id="38_eqfnh"]
+[ext_resource type="VideoStream" uid="uid://crl1uaff6vlvj" path="res://character assets/ENDING.ogv" id="39_7rfj8"]
+[ext_resource type="PackedScene" uid="uid://bl5mx7lgrwwa1" path="res://worllddsss_ennnddd.tscn" id="40_e72fr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
 blend_mode = 3
@@ -72,6 +77,14 @@ shader_parameter/Windstrength = -20.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ula2a"]
 size = Vector2(223, 39)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mj6nn"]
+shader = ExtResource("38_eqfnh")
+shader_parameter/key_color = Color(1, 1, 1, 1)
+shader_parameter/similarity = 0.0330000015675
+shader_parameter/smoothness = 0.330000015675
+shader_parameter/edge_strength = 0.134000006365
+shader_parameter/edge_softness = 0.2
 
 [node name="gassermap" type="Node2D"]
 position = Vector2(3723, 3013)
@@ -171,15 +184,20 @@ texture = ExtResource("30_ggyl6")
 position = Vector2(117, -1509.5)
 texture = ExtResource("20_vk8jv")
 
+[node name="GameCloudsgasser" type="Sprite2D" parent="."]
+position = Vector2(114, -1521)
+texture = ExtResource("33_vk8jv")
+script = ExtResource("34_65w8m")
+
 [node name="star" parent="." instance=ExtResource("10_ysndr")]
 material = SubResource("CanvasItemMaterial_h1qps")
-position = Vector2(1846, -936.5)
+position = Vector2(1856, -872)
 
 [node name="star2" parent="." instance=ExtResource("10_ysndr")]
 position = Vector2(-3466, -848.5)
 
 [node name="star3" parent="." instance=ExtResource("10_ysndr")]
-position = Vector2(-3045, -1960)
+position = Vector2(-3049, -2026)
 
 [node name="sfx_water" parent="." instance=ExtResource("16_f2fjy")]
 position = Vector2(-901, -1309.5)
@@ -205,6 +223,8 @@ position = Vector2(1628.9999, -1274)
 [node name="portal" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -336.49997)
 scale = Vector2(0.48000088, 0.40000182)
+
+[node name="MinigameContainer" type="Node2D" parent="portal"]
 
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
 position = Vector2(-2489, -378.5)
@@ -258,7 +278,31 @@ layout_mode = 1
 main_text_font_size = 18
 text_speed = 20.0
 
-[node name="GameClouds" type="Sprite2D" parent="."]
-position = Vector2(114, -1521)
-texture = ExtResource("33_vk8jv")
-script = ExtResource("34_65w8m")
+[node name="hint" parent="." instance=ExtResource("36_yyrpy")]
+
+[node name="ENDING gasser" parent="." instance=ExtResource("37_ww5xr")]
+
+[node name="ending gasser" type="VideoStreamPlayer" parent="ENDING gasser"]
+material = SubResource("ShaderMaterial_mj6nn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 289.0
+offset_top = 2.0
+offset_right = -391.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("39_7rfj8")
+expand = true
+
+[node name="worllddsss ennn gasserddd" parent="." node_paths=PackedStringArray("video_player", "coming_soon_screen", "black_backdrop") instance=ExtResource("40_e72fr")]
+position = Vector2(3922, -241)
+video_player = NodePath("../ENDING gasser/ending gasser")
+coming_soon_screen = NodePath("../ENDING gasser/Label")
+black_backdrop = NodePath("../ENDING gasser/ColorRect")
+
+[connection signal="body_entered" from="portal" to="." method="_on_portal_body_entered"]
+[connection signal="body_entered" from="worllddsss ennn gasserddd" to="gasser" method="_on_worllddsss_ennn_gasserddd_body_entered"]
+
+[editable path="ENDING gasser"]

@@ -15,8 +15,8 @@ func _ready():
 
 
 func _on_body_entered(body):
-	
-	if triggered or (body.name != "nader" and body.name != "fares"):
+	print(body_entered)
+	if triggered or (body.name != "gasser"):
 		return
 	triggered = true
 	play_end_sequence()

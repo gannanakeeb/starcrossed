@@ -145,6 +145,8 @@ autoplay = "star animation"
 frame_progress = 0.555761
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(2.2905455, -6.232926)
 shape = SubResource("CircleShape2D_wiuhm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

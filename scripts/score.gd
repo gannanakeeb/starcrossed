@@ -1,5 +1,5 @@
 extends Node2D
-
+signal minigame_won 
 var score: int = 0  # We will use this to track the 20-point jumps
 
 @onready var screen_size = get_viewport().size
@@ -30,5 +30,7 @@ func _draw():
 
 func trigger_win():
 	print("You reached 100 points!")
+	emit_signal("minigame_won")
 	get_tree().paused = true 
 	win_popup.visible = true
+	

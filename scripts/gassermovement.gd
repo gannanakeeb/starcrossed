@@ -132,3 +132,7 @@ func respawn():
 	else:
 		print("ERROR: No spawn point found!")  # لو مفيش spawn point هيطبع error
 	velocity = Vector2.ZERO  # وقّف حركة اللاعب بعد الـ respawn
+
+
+func _on_worllddsss_ennn_gasserddd_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

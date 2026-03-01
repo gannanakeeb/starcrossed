@@ -141,7 +141,7 @@ func _process(delta):
 	check_game_over()
 	
 func _on_button_pressed() :
-	get_window().size = Vector2i(1152, 648)
+	get_window().size = Vector2i(1280, 720)
 	get_window().move_to_center()
 	get_tree().paused = false
 	

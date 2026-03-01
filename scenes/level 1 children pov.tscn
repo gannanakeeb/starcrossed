@@ -286,7 +286,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="ENDING/Control"]
+[node name="endingg" type="VideoStreamPlayer" parent="ENDING/Control"]
 material = SubResource("ShaderMaterial_i10e2")
 layout_mode = 1
 anchors_preset = 15
@@ -303,12 +303,13 @@ expand = true
 
 [node name="worllddsss ennnddd" parent="." node_paths=PackedStringArray("video_player", "coming_soon_screen", "black_backdrop") instance=ExtResource("29_lq3jv")]
 position = Vector2(3962, 796)
-video_player = NodePath("../ENDING/Control/VideoStreamPlayer")
+video_player = NodePath("../ENDING/Control/endingg")
 coming_soon_screen = NodePath("../ENDING/Label")
 black_backdrop = NodePath("../ENDING/ColorRect")
 
 [connection signal="body_entered" from="riddle area" to="fares" method="_on_riddle_area_body_entered"]
 [connection signal="body_entered" from="DialogueStarter3" to="DialogueStarter3" method="_on_body_entered"]
 [connection signal="body_entered" from="worllddsss ennnddd" to="1/8/GameClouds" method="_on_worllddsss_ennnddd_body_entered"]
+[connection signal="body_entered" from="worllddsss ennnddd" to="fares" method="_on_worllddsss_ennnddd_body_entered"]
 
 [editable path="ENDING"]

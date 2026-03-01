@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bl5mx7lgrwwa1"]
 
-[ext_resource type="Script" uid="uid://cgsh6hn0o70sq" path="res://worllddsss_ennnddd.gd" id="1_7f37n"]
+[ext_resource type="Script" uid="uid://cf0yrndkts3hw" path="res://worllddsss_ennnddd gasser.gd" id="1_7f37n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u63l"]
 size = Vector2(12, 418)
@@ -11,3 +11,5 @@ script = ExtResource("1_7f37n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, -142)
 shape = SubResource("RectangleShape2D_6u63l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

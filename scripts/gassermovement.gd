@@ -29,6 +29,8 @@ var jump_sfx: Array = [
 	preload("res://sfx/jump sfx/jump 1 (3).wav"),
 	preload("res://sfx/jump sfx/jump 1 (4).wav"),
 ]
+var death_sfx: AudioStream = preload("res://sfx/Death sfx 01.wav")
+
 var jump_pair_index: int = 0
 var was_on_floor: bool = true
 
@@ -107,6 +109,9 @@ func respawn():
 	var fade = get_tree().get_first_node_in_group("fade")
 	if fade:
 		fade.fade_out(0.5)
+	sfx_player.stream = death_sfx
+	sfx_player.volume_db = 0
+	sfx_player.play()
 	var spawn = get_tree().get_first_node_in_group("spawn_point")
 	if spawn:
 		global_position = spawn.global_position

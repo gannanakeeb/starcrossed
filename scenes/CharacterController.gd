@@ -8,10 +8,11 @@ extends CharacterBody2D
 @export var sfx_jump: AudioStream
 @export var sprite: AnimatedSprite2D
 @export var spawn_point: Marker2D
+
 @onready var sfx_player: AudioStreamPlayer2D = $child_sfx
 @onready var sfx_footsteps: AudioStreamPlayer2D = $child_sfx_footsteps
 
-var footstep_frames: Array = [1, 2, 4]  # changed from [1, 3]
+var footstep_frames: Array = [1, 2, 4]
 var stars_collected: int = 0
 var footsteps: Array = [
 	preload("res://sfx/foot steps sfx/foot  (1).wav"),
@@ -31,6 +32,8 @@ var jump_sfx: Array = [
 	preload("res://sfx/jump sfx/jump 1 (3).wav"),
 	preload("res://sfx/jump sfx/jump 1 (4).wav"),
 ]
+var death_sfx: AudioStream = preload("res://sfx/Death sfx 01.wav")
+
 var jump_pair_index: int = 0
 var was_on_floor: bool = true
 
@@ -120,13 +123,20 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func respawn():
-	print("RESPAWN CALLED!")
+	var fade = get_tree().get_first_node_in_group("fade")
+	if fade:
+		fade.fade_out(0.5)
+	sfx_player.stream = death_sfx
+	sfx_player.volume_db = 0
+	sfx_player.play()
 	var spawn = get_tree().get_first_node_in_group("spawn_point")
 	if spawn:
 		global_position = spawn.global_position
 	else:
 		print("ERROR: No spawn point found!")
 	velocity = Vector2.ZERO
+	if fade:
+		fade.fade_in_delayed(0.5)
 
 
 func _on_death_zone_body_entered(body: Node2D) -> void:

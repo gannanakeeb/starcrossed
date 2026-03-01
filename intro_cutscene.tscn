@@ -23,4 +23,10 @@ stream = ExtResource("1_rlq26")
 autoplay = true
 expand = true
 
+[node name="skip btn" type="Button" parent="VideoStreamPlayer"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="VideoStreamPlayer/skip btn" to="." method="_on_skip_btn_pressed"]

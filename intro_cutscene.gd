@@ -14,8 +14,7 @@ func _ready():
 			sound_node.stop()
 
 	# 2. نخفي زرار التخطي أول ما المشهد يفتح
-	skip_button.hide()
-	
+
 	# 3. نشغل فيديو المقدمة (حط مسار الفيديو بتاعك هنا)
 	var video_path = "res://Assets/videos/Intro Final.ogv" 
 	if FileAccess.file_exists(video_path):
@@ -53,5 +52,8 @@ func _on_video_stream_player_finished():
 	go_to_next_screen()
 
 # الحالة 2: اللاعب داس تخطي
-func _on_btn_skip_pressed():
+
+
+
+func _on_skip_btn_pressed() -> void:
 	go_to_next_screen()

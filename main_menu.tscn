@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://8s4bu7gknyd7"]
+[gd_scene load_steps=3 format=3 uid="uid://bulwy6pylk3b"]
 
-[ext_resource type="Script" path="res://main_menu.gd" id="1_7vrkn"]
-[ext_resource type="VideoStream" uid="uid://bx76w1uw1s612" path="res://Assets/videos/menu.ogv" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://csqrteh4v60di" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="VideoStream" uid="uid://dc3cs7jui5twg" path="res://Assets/videos/menu.ogv" id="2_7vrkn"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

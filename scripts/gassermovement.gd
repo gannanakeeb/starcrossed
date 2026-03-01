@@ -1,5 +1,7 @@
 extends CharacterBody2D  # السكريبت مربوط على لاعب من نوع CharacterBody2D
 
+signal collected_three_stars
+
 @export var speed: float = 400.0  # سرعة الحركة الأفقية
 @export var jump_velocity: float = -800.0  # قوة القفز (سالب لأن الاتجاه للأعلى)
 @export var gravity: float = 980.0  # قوة الجاذبية
@@ -13,7 +15,7 @@ extends CharacterBody2D  # السكريبت مربوط على لاعب من نو
 @export var spawn_point: Marker2D  # نقطة الـ respawn
 
 @onready var sfx_player: AudioStreamPlayer2D = $sfx_gasser  # مشغل الأصوات
-
+@onready var sibling = get_node("../variable_dialogue") 
 var footstep_frames: Array = [1, 3]  # الفريمات اللي هيشتغل فيها صوت الخطوة (2 و 4 لأن جودو بيبدأ من 0)
 var stars_collected: int = 0  # عدد النجوم اللي اتجمعت
 
@@ -113,6 +115,10 @@ func add_star(amount := 1):
 	stars_collected += amount
 	print("stars:", stars_collected)
 	if stars_collected >= 3:
+
+		if sibling:
+			print("Position changed successfully")
+			sibling.global_position = global_position
 		emit_signal("collected_three_stars")  # ابعت سيجنال لما يتجمع 3 نجوم
 
 

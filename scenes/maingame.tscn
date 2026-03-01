@@ -38,6 +38,7 @@ sources/1 = SubResource("TileSetAtlasSource_hiawh")
 
 [node name="Maingame" type="Node2D"]
 process_mode = 3
+z_index = 3
 script = ExtResource("1_jxvlb")
 
 [node name="ColorRect" type="ColorRect" parent="."]

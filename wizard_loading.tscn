@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5mgk6xk37orh"]
+[gd_scene load_steps=3 format=3 uid="uid://bdhrxkods4o70"]
 
-[ext_resource type="Script" path="res://wizard_loading.gd" id="1_4gmaw"]
-[ext_resource type="VideoStream" uid="uid://dvwjfy6yajlne" path="res://Assets/videos/louding-w.ogv" id="2_mj57r"]
+[ext_resource type="Script" uid="uid://pfjep1d7v58p" path="res://wizard_loading.gd" id="1_4gmaw"]
+[ext_resource type="VideoStream" uid="uid://4pe7ch57xnsh" path="res://Assets/videos/louding-w.ogv" id="2_mj57r"]
 
 [node name="WizardLoading" type="Control"]
 layout_mode = 3

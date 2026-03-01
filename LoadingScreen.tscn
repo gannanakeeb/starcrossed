@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqa2uuv2js8rq"]
+[gd_scene load_steps=3 format=3 uid="uid://dxxlqlks3rkc3"]
 
-[ext_resource type="Script" path="res://Assets/loading_screen.gd" id="1_dhqi2"]
-[ext_resource type="VideoStream" uid="uid://dhk17kxc1honl" path="res://Assets/videos/louding.ogv" id="1_ghsbh"]
+[ext_resource type="Script" uid="uid://ctrtf0ws8akdt" path="res://loading_screen.gd" id="1_dhqi2"]
+[ext_resource type="VideoStream" uid="uid://cbvhd1yij3nl5" path="res://Assets/videos/louding.ogv" id="1_ghsbh"]
 
 [node name="LoadingScreen" type="Control"]
 layout_mode = 3

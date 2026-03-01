@@ -9,10 +9,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_btn_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://intro_cutscene.tscn")
-	
-func _on_btn_exit_pressed() -> void:
-	pass # Replace with function body.
-	get_tree().quit()
+func _on_video_stream_player_finished():
+	# بمجرد ما فيديو التحميل يخلص، نفتح ليفل الساحر
+	get_tree().change_scene_to_file("res://wizard_loading.tscn")

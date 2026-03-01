@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ljp1bjqa3ce7"]
+[gd_scene load_steps=3 format=3 uid="uid://dwtr23af01c8b"]
 
-[ext_resource type="Script" path="res://intro_cutscene.gd" id="1_lvalt"]
-[ext_resource type="VideoStream" uid="uid://d2glrvch46og8" path="res://Assets/videos/Intro Final.ogv" id="1_rlq26"]
+[ext_resource type="Script" uid="uid://dmxttywya54i0" path="res://intro_cutscene.gd" id="1_lvalt"]
+[ext_resource type="VideoStream" uid="uid://cyvrvb6amuokj" path="res://Assets/videos/Intro Final.ogv" id="1_rlq26"]
 
 [node name="IntroCutscene" type="Control"]
 layout_mode = 3

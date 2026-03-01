@@ -7,3 +7,7 @@ func disperse_clouds():
 	# 2. FADE: Make them vanish
 	tween.tween_property(self, "modulate:a", 0.0, 2.0)
 	tween.chain().finished.connect(func(): self.queue_free())
+
+
+func _on_worllddsss_ennnddd_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

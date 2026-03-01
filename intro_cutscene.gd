@@ -27,7 +27,7 @@ func _ready():
 # دالة الانتظار 5 ثواني
 func show_skip_button_after_delay():
 	await get_tree().create_timer(5.0).timeout
-	skip_button.show()
+
 
 # دالة الخروج من الكاتسين (سواء الفيديو خلص أو دوسنا تخطي)
 func go_to_next_screen():

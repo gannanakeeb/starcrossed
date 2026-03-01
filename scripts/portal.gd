@@ -25,7 +25,6 @@ func load_minigame(player_pos):
 	# 3. Add it directly on top of the current game screen
 	get_tree().root.add_child(minigame)
 	minigame.scale = Vector2(0.9, 0.9)
-	minigame.global_position = player_pos - Vector2(250, 700)
 	# 4. Pause the main game (so enemies don't attack you while you play snake!)
 	get_tree().paused = true
 

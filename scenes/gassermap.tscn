@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=45 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://73ywtvwsqgd1" path="res://gassermap/Map Gaser Final/platform.png" id="15_ula2a"]
 [ext_resource type="Texture2D" uid="uid://okitusp1lh6j" path="res://gassermap/Map Gaser Final/riddle code.png" id="15_ws52y"]
 [ext_resource type="PackedScene" uid="uid://cajic2lcjncjm" path="res://scenes/sfx_water.tscn" id="16_f2fjy"]
+[ext_resource type="Script" uid="uid://iy45edhe43ea" path="res://scenes/camera2D.gd" id="16_vk8jv"]
 [ext_resource type="PackedScene" uid="uid://bxbahka20nxcj" path="res://scenes/death_zone.tscn" id="17_death"]
 [ext_resource type="PackedScene" uid="uid://dnn33rot7da57" path="res://scenes/portal.tscn" id="17_fmdnp"]
 [ext_resource type="Texture2D" uid="uid://cmejuutmsux5q" path="res://gassermap/Map Gaser Final/cover for water .png" id="17_ggyl6"]
@@ -134,17 +135,21 @@ texture = ExtResource("14_65w8m")
 position = Vector2(-630, -1153.5)
 texture = ExtResource("15_ula2a")
 
-[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
-position = Vector2(1732, -1295)
-
-[node name="Camera2D" type="Camera2D" parent="gasser"]
-position = Vector2(328.90253, -769.23254)
-scale = Vector2(-7585.707, -2028.7229)
-zoom = Vector2(0.8, 0.8)
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "player")]
+position = Vector2(1554.2573, -1666.7991)
+rotation = -3.1415925
+scale = Vector2(4266.783, 1054.9335)
 limit_left = 0
 limit_top = 0
 limit_right = 7660
 limit_bottom = 3000
+script = ExtResource("16_vk8jv")
+target = NodePath("../gasser")
+follow_smoothing = 2.0
+player = NodePath("../gasser")
+
+[node name="gasser" parent="." instance=ExtResource("13_w2lsn")]
+position = Vector2(1802, -1579)
 
 [node name="Light2" type="Sprite2D" parent="."]
 material = SubResource("CanvasItemMaterial_vk8jv")
@@ -196,6 +201,9 @@ position = Vector2(-48.92824, -1.2100058)
 scale = Vector2(0.040946554, 0.029690119)
 texture = ExtResource("15_ws52y")
 
+[node name="code node" type="Node2D" parent="Area2D/Sprite2D2"]
+position = Vector2(19.080708, -6.298432)
+
 [node name="gasser2" parent="." instance=ExtResource("13_w2lsn")]
 visible = false
 position = Vector2(1628.9999, -1274)
@@ -203,6 +211,8 @@ position = Vector2(1628.9999, -1274)
 [node name="portal" parent="." instance=ExtResource("17_fmdnp")]
 position = Vector2(-1776, -336.49997)
 scale = Vector2(0.48000088, 0.40000182)
+
+[node name="Nodephone node2D" type="Node2D" parent="portal"]
 
 [node name="respawn_point" parent="." instance=ExtResource("18_respawn")]
 position = Vector2(-2489, -378.5)
@@ -212,6 +222,10 @@ position = Vector2(1789, -1518.5)
 conversation_file = "res://conversations/gasser script 1.txt"
 camera_targets = [null, null]
 
+[node name="Node2D" type="Node2D" parent="DialogueStarter"]
+visible = false
+position = Vector2(-948, -318.5)
+
 [node name="DialogueStarter2" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(261, -1514.5)
 conversation_file = "res://conversations/gasser script 2.txt"
@@ -220,12 +234,18 @@ camera_targets = [null]
 [node name="DialogueStarter3" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(-580, -1266.5)
 conversation_file = "res://conversations/gasser script 3.txt"
-camera_targets = [null, null]
+camera_targets = [NodePath("star node"), null, null]
+
+[node name="star node" type="Node2D" parent="DialogueStarter3"]
+position = Vector2(-2400, -729.5)
 
 [node name="DialogueStarter4" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
 position = Vector2(2111, -324.5)
 conversation_file = "res://conversations/gasser script 4.txt"
-camera_targets = [null]
+camera_targets = [NodePath("home node"), null]
+
+[node name="home node" type="Node2D" parent="DialogueStarter4"]
+position = Vector2(1001, -645.5)
 
 [node name="Ambience_sfx" parent="." instance=ExtResource("23_ci03i")]
 position = Vector2(0, 2.5)
@@ -240,6 +260,7 @@ position = Vector2(120, -1089)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(641.5, 602.5)
 shape = SubResource("RectangleShape2D_ula2a")
+one_way_collision = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -253,3 +274,8 @@ grow_vertical = 2
 
 [node name="DialogueSystem" parent="CanvasLayer2/screen" instance=ExtResource("19_dialoguebox")]
 layout_mode = 1
+
+[node name="variable_dialogue" parent="." node_paths=PackedStringArray("camera_targets") instance=ExtResource("20_dialoguestarter")]
+position = Vector2(1322, 92)
+conversation_file = "res://conversations/var script .txt"
+camera_targets = [NodePath("../Area2D/Sprite2D2/code node"), NodePath("../portal/Nodephone node2D"), null]

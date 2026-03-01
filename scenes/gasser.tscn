@@ -110,10 +110,9 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jklgs"]
 radius = 86.92746
-height = 441.3513
+height = 875.5842
 
 [node name="gasser" type="CharacterBody2D" node_paths=PackedStringArray("sprite") groups=["player"]]
-position = Vector2(-58, 157)
 scale = Vector2(0.56247663, 0.5199988)
 script = ExtResource("1_77hif")
 speed = 350.0
@@ -124,14 +123,15 @@ metadata/_edit_horizontal_guides_ = [-332.0, -19.0, -288.0]
 metadata/_edit_vertical_guides_ = [182.0, 46.0, 84.0]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(280.90057, -613.463)
+z_index = 2
+position = Vector2(-28.445627, -25.00006)
 scale = Vector2(0.6706924, 0.66393054)
 sprite_frames = SubResource("SpriteFrames_sksnt")
 animation = &"idle"
 frame_progress = 0.6416264
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(321.79114, -461.5396)
+position = Vector2(1.7778513, 3.846161)
 scale = Vector2(0.49085116, -0.5402999)
 shape = SubResource("CapsuleShape2D_jklgs")
 

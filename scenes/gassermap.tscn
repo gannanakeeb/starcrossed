@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cyrjd4os6s63a"]
+[gd_scene load_steps=46 format=3 uid="uid://cyrjd4os6s63a"]
 
 [ext_resource type="Texture2D" uid="uid://et5fx2b5afhb" path="res://gassermap/Map Gaser Final/1 skynew.png" id="1_w2lsn"]
 [ext_resource type="Texture2D" uid="uid://budojgmq3xk3l" path="res://gassermap/Map Gaser Final/2 house bg.png" id="2_ko041"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cbd8h8cjhk0ci" path="res://gassermap/Map Gaser Final/6 other.png" id="9_pp740"]
 [ext_resource type="Texture2D" uid="uid://bhauttxsvq2qt" path="res://gassermap/Map Gaser Final/8 front of ch.png" id="9_vs67v"]
 [ext_resource type="Texture2D" uid="uid://c3gx8iweoredg" path="res://gassermap/Map Gaser Final/grass.png" id="10_gxtnq"]
-[ext_resource type="Texture2D" uid="uid://vxq6400umqd4" path="res://gassermap/Map Gaser Final/9 clouds.png" id="10_xvat7"]
+[ext_resource type="Texture2D" uid="uid://vxq6400umqd4" path="res://gassermap/9 clouds.png" id="10_xvat7"]
 [ext_resource type="PackedScene" uid="uid://b1ohewpn1jj6x" path="res://scenes/star.tscn" id="10_ysndr"]
 [ext_resource type="Texture2D" uid="uid://cjkp34pyt1lke" path="res://gassermap/Map Gaser Final/tree .png" id="12_ggyl6"]
 [ext_resource type="PackedScene" uid="uid://baxaogtqnw2ed" path="res://scenes/gasser.tscn" id="13_w2lsn"]
@@ -32,6 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://186mad87pccb" path="res://scenes/Ambience_sfx.tscn" id="23_ci03i"]
 [ext_resource type="PackedScene" uid="uid://cfoxmeim4j3np" path="res://scenes/ost_1.tscn" id="24_ejmul"]
 [ext_resource type="Texture2D" uid="uid://okjm46vojrun" path="res://gassermap/Map Gaser Final/front ch grass.png" id="30_ggyl6"]
+[ext_resource type="Texture2D" uid="uid://cmm3axndvis45" path="res://character assets/game clouds.png" id="33_vk8jv"]
+[ext_resource type="Script" uid="uid://kqc17xtobeh7" path="res://scripts/game_clouds.gd" id="34_65w8m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5rjgn"]
 blend_mode = 3
@@ -253,3 +255,10 @@ grow_vertical = 2
 
 [node name="DialogueSystem" parent="CanvasLayer2/screen" instance=ExtResource("19_dialoguebox")]
 layout_mode = 1
+main_text_font_size = 18
+text_speed = 20.0
+
+[node name="GameClouds" type="Sprite2D" parent="."]
+position = Vector2(114, -1521)
+texture = ExtResource("33_vk8jv")
+script = ExtResource("34_65w8m")

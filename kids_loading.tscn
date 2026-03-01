@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://n6xtkmlsma6x"]
+
+[ext_resource type="Script" path="res://kids_loading.gd" id="1_kai8t"]
+[ext_resource type="VideoStream" uid="uid://bjh2lsb67rme" path="res://Assets/videos/louding-k.ogv" id="2_msyib"]
+
+[node name="KidsLoading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kai8t")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_msyib")
+autoplay = true
+expand = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
